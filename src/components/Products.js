@@ -30,5 +30,11 @@ const StyledSection = styled(motion.section)`
     flex-wrap: wrap;
     justify-content: space-between;
 	padding-bottom: 5rem;
+	@media (max-width: 1150px){
+		padding: 0rem 3rem;
+	}
+	@media (max-width: 500px){
+		padding: 0rem 1rem;
+	}
 `;
 export default Products;

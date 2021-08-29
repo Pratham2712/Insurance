@@ -19,14 +19,20 @@ const Product = ({ data }) => {
 
 const Card = styled(motion.div)`
     width: 20%;
-    height: 45vh;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+   
     border-radius: 0.2rem;
     padding: 1rem 1rem;
     align-items: center;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    @media (max-width: 1150px){
+        width: 33.33%;
+    }
+    @media (max-width: 500px){
+        width: 50%;
+    }
     img {
         width: 100%;
         object-fit: cover;
@@ -44,6 +50,7 @@ const Card = styled(motion.div)`
         color: #4a4a4a;
         font-weight: lighter;
         margin-bottom: 1.5rem;
+        margin-top: 2rem;
         &:hover {
             background-color: #6C63FF;
             color: white;

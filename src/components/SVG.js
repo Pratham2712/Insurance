@@ -286,6 +286,10 @@ const SVG = () => {
 const Hide = styled.div``;
 const StyledSvg = styled.svg`
 	flex: 1;
+	@media (max-width: 500px) {
+		width: 550px;
+		height: 200px;
+	}
 
 	#bigBar {
 		animation: draw 2s linear forwards;

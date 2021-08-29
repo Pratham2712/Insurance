@@ -7,7 +7,7 @@ import Fade from 'react-reveal/Fade';
 const InitialPage = () => {
 	return (
 		<StyledSection>
-			<div style={{ width: '50%' }}>
+			<div className="part1">
 				<Fade left>
 					<LargeText>
 						<span style={{ color: '#EF6009' }}>No worries,</span> we’ve got you covered!
@@ -25,7 +25,7 @@ const InitialPage = () => {
 					</Fade>
 				</Buttons>
 			</div>
-			<div style={{ width: '50%' }}>
+			<div className="part2">
 				<SVG />
 			</div>
 		</StyledSection>
@@ -38,6 +38,27 @@ const StyledSection = styled(motion.section)`
     padding: 0rem 5rem;
     padding-top: 8rem;
     z-index: -1;
+    .part1{
+        width: 50%;
+    }
+    .part2{
+        width: 50%;
+    }
+    @media (max-width:1150px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0rem 3rem;
+        .part1 {
+            width: 100%;
+        }
+        .part2 {
+            width: 100%;
+        }
+    }
+    @media (max-width: 500px){
+        padding: 0rem 1rem;
+    }
 `;
 const LargeText = styled(motion.div)`
     font-size: 2.4rem;
