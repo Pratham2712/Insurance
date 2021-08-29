@@ -37,6 +37,7 @@ const Nav = () => {
 				</ul>
 			</div>
 		</StyledNav>
+		/* </Fade> */
 	);
 };
 
@@ -46,12 +47,12 @@ const StyledNav = styled(motion.nav)`
 	justify-content: space-between;
 	align-items: center;
     top: 0;
-	z-index: 10;
+	z-index: 100;
     width: 100%;
     border-bottom: 1px solid grey;
     position: fixed;
     padding: 0rem 5rem;
-	background: white;
+	background-color: white;
     ul {
 		display: flex;
         font-size: 1.2rem;
@@ -96,11 +97,13 @@ const StyledNav = styled(motion.nav)`
 `;
 
 const Image = styled.div`
+	background-color: inherit;
 	img {
 		width: 17rem;
 		height: 10vh;
 		object-fit: cover;
 		cursor: pointer;
+		background-color: white;
 	}
 `;
 

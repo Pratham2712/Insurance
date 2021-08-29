@@ -2,20 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import SVG from './SVG';
+import Fade from 'react-reveal/Fade';
 
 const InitialPage = () => {
 	return (
 		<StyledSection>
 			<div style={{ width: '50%' }}>
-				<LargeText>
-					<span style={{ color: '#EF6009' }}>No worries,</span> we’ve got you covered!
-				</LargeText>
-				<SmallText>
-					Where <span style={{ color: '#EF6009' }}>Growth</span> is Priority
-				</SmallText>
+				<Fade left>
+					<LargeText>
+						<span style={{ color: '#EF6009' }}>No worries,</span> we’ve got you covered!
+					</LargeText>
+				</Fade>
+				<Fade right>
+					<SmallText>
+						Where <span style={{ color: '#EF6009' }}>Growth</span> is Priority
+					</SmallText>
+				</Fade>
 				<Buttons>
-					<button>Top plans</button>
-					<button>Apply now</button>
+					<Fade bottom>
+						<button>Top plans</button>
+						<button>Apply now</button>
+					</Fade>
 				</Buttons>
 			</div>
 			<div style={{ width: '50%' }}>
@@ -30,6 +37,7 @@ const StyledSection = styled(motion.section)`
     min-height: 88vh;
     padding: 0rem 5rem;
     padding-top: 8rem;
+    z-index: -1;
 `;
 const LargeText = styled(motion.div)`
     font-size: 2.4rem;
