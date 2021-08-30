@@ -1,14 +1,14 @@
-import React, { useState, useLayoutEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import logo from '../Images/logo.PNG';
 
 const Nav = () => {
 	const [ toggle, setToggle ] = useState(false);
-	const [ height, setHeight ] = useState(false);
+	/* const [ height, setHeight ] = useState(false);
 	const ourRef = useRef(null);
-
-	useLayoutEffect(() => {
+ */
+	/* useLayoutEffect(() => {
 		const topPosition = ourRef.current.getBoundingClientRect().top;
 		const onScroll = () => {
 			const scrollPosition = window.scrollY + window.innerHeight;
@@ -19,16 +19,10 @@ const Nav = () => {
 
 		window.addEventListener('scroll', onScroll);
 		return () => window.removeEventListener('scroll', onScroll);
-	}, []);
+	}, []); */
 
 	return (
-		<StyledNav
-			ref={ourRef}
-			style={{
-				minHeight: height ? '10vh' : '15vh',
-				boxShadow: height ? '0 8px 6px -6px grey' : ''
-			}}
-		>
+		<StyledNav>
 			<Image>
 				<img src={logo} alt="GodSpeed" />
 			</Image>
@@ -82,6 +76,7 @@ const StyledNav = styled(motion.nav)`
     padding: 0rem 5rem;
 	transition: min-height .3s ease-in;
 	background-color: white;
+	box-shadow: 0 8px 6px -6px grey;
 	@media (max-width: 1150px) {
 		padding: 0rem 3rem;
 	}
