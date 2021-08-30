@@ -5,7 +5,7 @@ export const productAnim = {
 	show: {
 		scale: 1,
 		transition: {
-			duration: 1,
+			duration: 0.5,
 			ease: 'easeOut'
 		}
 	}
