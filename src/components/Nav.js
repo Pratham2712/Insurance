@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import logo from '../Images/logo.PNG';
 
 const Nav = () => {
 	const [ toggle, setToggle ] = useState(false);
+
+	useEffect(() => {
+		const back = document.querySelector('.back');
+		document.addEventListener('click', function(event) {
+			if (event.target === back) {
+				setToggle(false);
+			}
+		});
+	}, []);
 	/* const [ height, setHeight ] = useState(false);
 	const ourRef = useRef(null);
  */
@@ -31,6 +40,7 @@ const Nav = () => {
 					style={{
 						transform: toggle ? 'translateX(0%)' : ''
 					}}
+					className="back"
 				>
 					<li>
 						<a href="#">Products</a>

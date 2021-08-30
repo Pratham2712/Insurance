@@ -64,13 +64,14 @@ const LargeText = styled(motion.div)`
     font-size: 2.4rem;
     font-weight: bold;
     color: #4A4A4A;
+    text-align: center;
     padding-top: 5rem;
     @media (max-width:500px){
         font-size: 1.8rem;
     }
 `;
 const SmallText = styled(motion.div)`
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: lighter;
     padding-top: 1.5rem;
     text-align: center;
