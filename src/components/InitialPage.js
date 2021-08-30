@@ -65,6 +65,9 @@ const LargeText = styled(motion.div)`
     font-weight: bold;
     color: #4A4A4A;
     padding-top: 5rem;
+    @media (max-width:500px){
+        font-size: 1.8rem;
+    }
 `;
 const SmallText = styled(motion.div)`
     font-size: 1.4rem;
@@ -79,6 +82,7 @@ const Buttons = styled(motion.div)`
     justify-content: center;
     padding-top: 4.5rem;
     margin-left: -4rem;
+   
      button {
         font-size: 1.5rem;
         cursor: pointer;
@@ -93,6 +97,11 @@ const Buttons = styled(motion.div)`
         font-weight: lighter;
         &:hover {
             box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        }
+         @media (max-width:500px){
+            font-size: 1rem;
+            padding: 0.4rem 1.2rem;
+            margin-left: 2.5rem;
         }
      }
 `;

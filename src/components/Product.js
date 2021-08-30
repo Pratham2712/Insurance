@@ -28,10 +28,11 @@ const Card = styled(motion.div)`
     align-items: center;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     @media (max-width: 1150px){
-        width: 33.33%;
+        width: 32%;
+        margin: 0.1rem 0.1rem;
     }
     @media (max-width: 500px){
-        width: 50%;
+        width: 49%;
     }
     img {
         width: 100%;

@@ -287,8 +287,12 @@ const Hide = styled.div``;
 const StyledSvg = styled.svg`
 	flex: 1;
 	@media (max-width: 500px) {
-		width: 550px;
-		height: 200px;
+		margin-top: 1rem;
+		width: 400px;
+		height: 150px;
+	}
+	@media (max-width: 1150px) {
+		margin-top: 3rem;
 	}
 
 	#bigBar {

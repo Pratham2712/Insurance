@@ -22,7 +22,11 @@ const Products = () => {
 			title: 'Travel'
 		}
 	];
-	return <StyledSection>{products.map((data) => <Product data={data} />)}</StyledSection>;
+	return (
+		<StyledSection>
+			{products.map((data) => <Product data={data} key={Math.random() * products.length} />)}
+		</StyledSection>
+	);
 };
 const StyledSection = styled(motion.section)`
     padding: 0rem 5rem;
