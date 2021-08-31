@@ -313,10 +313,10 @@ const StyledSvg = styled.svg`
 		transform: scaleY(0);
 		stroke-width: 2px;
 	}
-	#body {
+	/* #body {
 		animation: upDown 3s ease-in-out infinite alternate;
 		transform-origin: center;
-	}
+	} */
 
 	@keyframes upDown {
 		0% {
