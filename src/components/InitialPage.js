@@ -43,6 +43,7 @@ const StyledSection = styled(motion.section)`
     }
     .part2{
         width: 50%;
+        overflow: hidden;
     }
     @media (max-width:1150px){
         flex-direction: column;
