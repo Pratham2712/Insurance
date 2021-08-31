@@ -108,7 +108,7 @@ const StyledNav = styled(motion.nav)`
 			right: 0;
 			align-items: flex-end;
 			transform: translateX(100%);
-            transition: transform .3s ease;
+            transition: transform .2s ease;
 		}
 	}
     li {
