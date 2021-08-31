@@ -283,7 +283,7 @@ const SVG = () => {
 		</Hide>
 	);
 };
-const Hide = styled.div``;
+const Hide = styled.div`overflow: hidden;`;
 const StyledSvg = styled.svg`
 	flex: 1;
 	@media (max-width: 500px) {
