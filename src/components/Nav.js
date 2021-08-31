@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import logo from '../Images/logo.PNG';
+import LazyLoad from 'react-lazyload';
 
 const Nav = () => {
 	const [ toggle, setToggle ] = useState(false);
@@ -33,7 +34,9 @@ const Nav = () => {
 	return (
 		<StyledNav>
 			<Image>
-				<img src={logo} alt="GodSpeed" />
+				<LazyLoad effect="blur">
+					<img src={logo} alt="GodSpeed" />
+				</LazyLoad>
 			</Image>
 			<div>
 				<ul

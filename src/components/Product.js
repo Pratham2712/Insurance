@@ -3,13 +3,17 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { productAnim } from '../Animation';
 import { useScroll } from '../UseScroll';
+import LazyLoad from 'react-lazyload';
+
 const Product = ({ data }) => {
 	const { title, url } = data;
 	const [ element, controls ] = useScroll();
 	return (
 		<Card variants={productAnim} animate={controls} ref={element} initial="hidden">
 			<div style={{ textAlign: 'center' }}>
-				<img src={url} alt="" />
+				<LazyLoad effect="blur">
+					<img src={url} alt="" />
+				</LazyLoad>
 				<h1>{title}</h1>
 			</div>
 			<button>View plans</button>
@@ -38,6 +42,9 @@ const Card = styled(motion.div)`
         width: 100%;
         object-fit: cover;
         height: 7rem;
+         @media (max-width: 500px){
+             height: 4rem;
+         }
 
     }
     button {
