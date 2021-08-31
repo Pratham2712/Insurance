@@ -19,7 +19,7 @@ const InitialPage = () => {
 					</SmallText>
 				</Fade>
 				<Buttons>
-					<Fade bottom>
+					<Fade>
 						<button>Top plans</button>
 						<button>Apply now</button>
 					</Fade>

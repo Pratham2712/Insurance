@@ -297,18 +297,21 @@ const StyledSvg = styled.svg`
 
 	#bigBar {
 		animation: draw 2s linear forwards;
+		animation-delay: 0.5s;
 		transform-origin: center bottom;
 		transform: scaleY(0);
 		stroke-width: 2px;
 	}
 	#medBar {
 		animation: draw 2s linear forwards;
+		animation-delay: 0.3s;
 		transform-origin: center bottom;
 		transform: scaleY(0);
 		stroke-width: 2px;
 	}
 	#smallBar {
 		animation: draw 2s linear forwards;
+		animation-delay: 0.5s;
 		transform-origin: center bottom;
 		transform: scaleY(0);
 		stroke-width: 2px;
