@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import logo from '../Images/logo.PNG';
 import LazyLoad from 'react-lazyload';
+import logosvg from '../Images/logo.svg';
 
 const Nav = () => {
 	const [ toggle, setToggle ] = useState(false);
@@ -33,11 +34,11 @@ const Nav = () => {
 
 	return (
 		<StyledNav>
-			{/* <Image>
+			<Image>
 				<LazyLoad effect="blur">
-					<img src={logo} alt="GodSpeed" />
+					<img src={logosvg} alt="GodSpeed" />
 				</LazyLoad>
-			</Image> */}
+			</Image>
 			<div>
 				<ul
 					style={{
@@ -181,13 +182,18 @@ const StyledNav = styled(motion.nav)`
 const Image = styled.div`
 	background-color: inherit;
 	img {
-		width: 17rem;
+		width: 100%;
 		height: 10vh;
 		object-fit: cover;
 		cursor: pointer;
 		background-color: white;
 		@media (max-width: 500px) {
-			width: 12rem;
+			width: 100%;
+			height: 8vh;
+		}
+		@media (max-width: 1150px) {
+			width: 100%;
+			height: 9vh;
 		}
 	}
 `;
