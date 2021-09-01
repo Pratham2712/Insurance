@@ -319,10 +319,10 @@ const StyledSvg = styled.svg`
 		transform: scaleY(0);
 		stroke-width: 2px;
 	}
-	/* #body {
+	#body {
 		animation: upDown 3s ease-in-out infinite alternate;
 		transform-origin: center;
-	} */
+	}
 
 	@keyframes upDown {
 		0% {
@@ -331,7 +331,7 @@ const StyledSvg = styled.svg`
 		}
 
 		50% {
-			transform: translate(8px, 3px);
+			transform: translate(0px, 10px);
 			animation-timing-function: ease-in-out;
 		}
 

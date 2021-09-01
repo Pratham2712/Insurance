@@ -33,11 +33,11 @@ const Nav = () => {
 
 	return (
 		<StyledNav>
-			<Image>
+			{/* <Image>
 				<LazyLoad effect="blur">
 					<img src={logo} alt="GodSpeed" />
 				</LazyLoad>
-			</Image>
+			</Image> */}
 			<div>
 				<ul
 					style={{
