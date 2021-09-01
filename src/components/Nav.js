@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import logo from '../Images/logo.PNG';
-import LazyLoad from 'react-lazyload';
 import logosvg from '../Images/logo.svg';
 
 const Nav = () => {
@@ -35,9 +34,7 @@ const Nav = () => {
 	return (
 		<StyledNav>
 			<Image>
-				<LazyLoad effect="blur">
-					<img src={logosvg} alt="GodSpeed" />
-				</LazyLoad>
+				<img src={logosvg} alt="GodSpeed" />
 			</Image>
 			<div>
 				<ul

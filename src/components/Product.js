@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { productAnim } from '../Animation';
 import { useScroll } from '../UseScroll';
-import LazyLoad from 'react-lazyload';
 
 const Product = ({ data }) => {
 	const { title, url } = data;
@@ -11,9 +10,8 @@ const Product = ({ data }) => {
 	return (
 		<Card variants={productAnim} animate={controls} ref={element} initial="hidden">
 			<div style={{ textAlign: 'center' }}>
-				<LazyLoad effect="blur">
-					<img src={url} alt="" />
-				</LazyLoad>
+				<img src={url} alt="" />
+
 				<h1>{title}</h1>
 			</div>
 			<button>View plans</button>
