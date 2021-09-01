@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const SVG = () => {
 	return (
 		<Hide>
-			<StyledSvg width="700" height="350" viewBox="0 0 648 442" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<StyledSvg viewBox="0 0 648 442" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g clipPath="url(#clip0)" id="body">
 					<path
 						id="vector"
@@ -285,14 +285,17 @@ const SVG = () => {
 };
 const Hide = styled.div`overflow: hidden;`;
 const StyledSvg = styled.svg`
+	height: 55vh;
+	width: 95%;
 	flex: 1;
 	@media (max-width: 500px) {
-		margin-top: 1rem;
-		width: 400px;
-		height: 150px;
+		width: 100%;
+		height: 28vh;
 	}
 	@media (max-width: 1150px) {
-		margin-top: 3rem;
+		margin-top: 2rem;
+		width: 100%;
+		height: 33vh;
 	}
 
 	#bigBar {

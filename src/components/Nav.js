@@ -71,7 +71,7 @@ const Nav = () => {
 				</ul>
 			</div>
 			<StyledBurger onClick={() => setToggle(!toggle)}>
-				<i className="fas fa-bars" />
+				{!toggle ? <i className="fas fa-bars" /> : <i class="fas fa-times" />}
 			</StyledBurger>
 		</StyledNav>
 	);

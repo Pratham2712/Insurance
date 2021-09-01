@@ -37,14 +37,6 @@ const StyledSection = styled(motion.section)`
     min-height: 88vh;
     padding: 0rem 5rem;
     padding-top: 8rem;
-    z-index: -1;
-    .part1{
-        width: 50%;
-    }
-    .part2{
-        width: 50%;
-        overflow: hidden;
-    }
     @media (max-width:1150px){
         flex-direction: column;
         justify-content: center;
