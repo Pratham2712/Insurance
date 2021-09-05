@@ -1,15 +1,15 @@
 import Nav from './components/Nav';
 import GlobalStyles from './GlobalStyles';
-import InitialPage from './components/InitialPage';
-import Products from './components/Products';
+import UpperNav from './components/UpperNav';
+import Home from './pages/Home';
 
 function App() {
 	return (
 		<div className="App">
 			<GlobalStyles />
+			<UpperNav />
 			<Nav />
-			<InitialPage />
-			<Products />
+			<Home />
 		</div>
 	);
 }

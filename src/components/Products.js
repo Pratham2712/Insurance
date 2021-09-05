@@ -20,6 +20,22 @@ const Products = () => {
 		{
 			url: 'https://www.squareinsurance.in/assets/img/travel-insurance.svg',
 			title: 'Travel'
+		},
+		{
+			url: 'https://www.squareinsurance.in/assets/img/travel-insurance.svg',
+			title: 'Travel'
+		},
+		{
+			url: 'https://www.squareinsurance.in/assets/img/travel-insurance.svg',
+			title: 'Travel'
+		},
+		{
+			url: 'https://www.squareinsurance.in/assets/img/travel-insurance.svg',
+			title: 'Travel'
+		},
+		{
+			url: 'https://www.squareinsurance.in/assets/img/travel-insurance.svg',
+			title: 'Travel'
 		}
 	];
 	return (
@@ -32,8 +48,8 @@ const StyledSection = styled(motion.section)`
     padding: 0rem 5rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-	padding-bottom: 5rem;
+    justify-content: center;
+	padding-bottom: 4rem;
 	@media (max-width: 1150px){
 		padding: 0rem 3rem;
 	}

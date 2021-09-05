@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import logo from '../Images/logo.PNG';
 import logosvg from '../Images/logo.svg';
 
 const Nav = () => {
@@ -44,7 +43,7 @@ const Nav = () => {
 					className="back"
 				>
 					<li>
-						<a href="#">Products</a>
+						<a href="#">Insurance</a>
 					</li>
 					<li>
 						<a href="#">Renewals</a>
@@ -80,9 +79,9 @@ const StyledNav = styled(motion.nav)`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-    top: 0;
 	z-index: 100;
     width: 100%;
+	top: 8vh;
     position: fixed;
     padding: 0rem 5rem;
 	transition: min-height .3s ease-in;
@@ -117,6 +116,7 @@ const StyledNav = styled(motion.nav)`
         padding-right: 1.3rem;
         transition: all .3s ease;
         transition: transform color .1s ease;
+		font-weight: bold;
 		@media (max-width: 1150px){
 			padding: 1rem 0rem;
 			padding-left: 1.5rem;
@@ -164,12 +164,12 @@ const StyledNav = styled(motion.nav)`
         margin-top: -7px;
         transition: all .3s ease;
         border-radius: 0.2rem;
-        border: 2px solid #6C63FF;
-        background-color: #6C63FF;
+        border: 2px solid #0493F1;
+        background-color: #0493F1;
         color: white;
         &:hover {
 			color: black;
-            border: 2px solid #6C63FF;
+            border: 2px solid #0493F1;
             background-color: white;
 		}
     

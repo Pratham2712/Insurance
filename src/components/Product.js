@@ -14,7 +14,7 @@ const Product = ({ data }) => {
 
 				<h1>{title}</h1>
 			</div>
-			<button>View plans</button>
+			<button>Enroll Now</button>
 		</Card>
 	);
 };
@@ -24,17 +24,21 @@ const Card = styled(motion.div)`
     height: auto;
     display: flex;
     flex-direction: column;
-   
+    margin: 1.5rem 0rem;
+    margin-right: 3rem;
     border-radius: 0.2rem;
     padding: 1rem 1rem;
     align-items: center;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     @media (max-width: 1150px){
         width: 32%;
-        margin: 0.5rem 0.1rem;
+        margin-right: 0.5rem;
+
     }
     @media (max-width: 500px){
         width: 48%;
+        margin-right: 0.4rem;
+
     }
     img {
         width: 100%;
@@ -49,19 +53,19 @@ const Card = styled(motion.div)`
         font-size: 1rem;
         cursor: pointer;
         padding: 0.2rem 0.9rem;
-        background: transparent;
         transition: all .3s ease;
         border-radius: 0.2rem;
-        border: 2px solid #6C63FF;
-        color: #4a4a4a;
-        font-weight: lighter;
+        border: 2px solid #0493F1;
+        font-weight: bold;
         margin-bottom: 1.5rem;
         margin-top: 2rem;
+        background-color: #0493F1;
+        color: white;
         &:hover {
-            background-color: #6C63FF;
-            color: white;
+            background: transparent;
+            color: #4a4a4a;
         }
-     }
-`;
+    }
+    `;
 
 export default Product;

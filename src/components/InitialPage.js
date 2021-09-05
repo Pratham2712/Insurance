@@ -15,7 +15,7 @@ const InitialPage = () => {
 				</Fade>
 				<Fade right>
 					<SmallText>
-						Where <span style={{ color: '#EF6009' }}>Growth</span> is Priority
+						Where <span style={{ color: '#EF6009' }}>Service</span> is Priority
 					</SmallText>
 				</Fade>
 				<Buttons>
@@ -41,7 +41,8 @@ const StyledSection = styled(motion.section)`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0rem 3rem;
+        padding-top: 5rem;
+        padding-bottom: 0rem;
         .part1 {
             width: 100%;
         }
@@ -51,6 +52,7 @@ const StyledSection = styled(motion.section)`
     }
     @media (max-width: 500px){
         padding: 0rem 1rem;
+        padding-top: 5rem;
     }
 `;
 const LargeText = styled(motion.div)`
@@ -84,8 +86,8 @@ const Buttons = styled(motion.div)`
         background: transparent;
         transition: all .3s ease;
         border-radius: 0.2rem;
-        border: 2px solid #6C63FF;
-        background-color: #6C63FF;
+        border: 2px solid #0493F1;
+        background-color: #0493F1;
         color: white;
         margin-left: 4rem;
         font-weight: lighter;
