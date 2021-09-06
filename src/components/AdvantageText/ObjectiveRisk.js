@@ -14,11 +14,11 @@ const ObjectiveRisk = () => {
 				</p>
 				<p>
 					<img src={tag} alt="" />
-					GodSpeed helps you to know what types of level coverage are right for your situation.
+					GodSpeed helps you to know what levels of coverage are right for your situation.
 				</p>
 				<p>
 					<img src={tag} alt="" />
-					Based on our experience & training, we analyse the risks and liabilities you face Then, with this
+					Based on our experience & training, we analyse the risks and liabilities you face then, with these
 					objective risk.
 				</p>
 			</Box>

@@ -10,7 +10,7 @@ const Claim = () => {
 				<h2>Claim Assistance</h2>
 				<p>
 					<img src={tag} alt="" />
-					Claim is become very easy with GodSpeed.
+					Claim gets easier with GodSpeed.
 				</p>
 				<p>
 					<img src={tag} alt="" />
@@ -19,7 +19,7 @@ const Claim = () => {
 				</p>
 				<p>
 					<img src={tag} alt="" />
-					Compensation means Easy, Quick, Trustable.
+					Claims means Easy, Quick, Trustable.
 				</p>
 			</Box>
 		</Fade>

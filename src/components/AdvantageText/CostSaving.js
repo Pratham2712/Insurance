@@ -14,11 +14,11 @@ const CostSaving = () => {
 				</p>
 				<p>
 					<img src={tag} alt="" />
-					We offer you a range of different insurance's quotes for more options to fit your needs.
+					We offer you a range of different insurance products for more options to fit your needs.
 				</p>
 				<p>
 					<img src={tag} alt="" />
-					GodSpeed guide to choose the best price from several insurance which suites you.
+					GodSpeed guides to choose the best price from several insurance which suites you.
 				</p>
 			</Box>
 		</Fade>

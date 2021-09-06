@@ -23,58 +23,94 @@ const Advantages = () => {
 			</Head>
 			<Flex>
 				<FirstPart>
-					<ButtonBox
-						onClick={() => {
-							setCost(true);
-							setClaim(false);
-							setPolicy(false);
-							setRisk(false);
-						}}
-						style={{
-							color: cost ? '#003478' : ''
-						}}
-					>
-						<img src={costSaving} alt="" /> Cost Saving
-					</ButtonBox>
-					<ButtonBox
-						onClick={() => {
-							setClaim(true);
-							setCost(false);
-							setPolicy(false);
-							setRisk(false);
-						}}
-						style={{
-							color: claim ? '#003478' : ''
-						}}
-					>
-						<img src={Claim} alt="" />Claim Assistance
-					</ButtonBox>
-					<ButtonBox
-						onClick={() => {
-							setPolicy(true);
-							setCost(false);
-							setClaim(false);
-							setRisk(false);
-						}}
-						style={{
-							color: policy ? '#003478' : ''
-						}}
-					>
-						<img src={policyImage} alt="" />Accurate Policy Comparison
-					</ButtonBox>
-					<ButtonBox
-						onClick={() => {
-							setRisk(true);
-							setCost(false);
-							setClaim(false);
-							setPolicy(false);
-						}}
-						style={{
-							color: risk ? '#003478' : ''
-						}}
-					>
-						<img src={riskImage} alt="" /> Objective Risk Assessment
-					</ButtonBox>
+					<Tabs>
+						<div
+							style={{
+								visibility: cost ? 'visible' : 'hidden'
+							}}
+						>
+							<i className="fas fa-caret-left" />
+						</div>
+						<ButtonBox
+							onClick={() => {
+								setCost(true);
+								setClaim(false);
+								setPolicy(false);
+								setRisk(false);
+							}}
+							style={{
+								color: cost ? '#003478' : ''
+							}}
+						>
+							<img src={costSaving} alt="" /> Cost Saving
+						</ButtonBox>
+					</Tabs>
+					<Tabs>
+						<div
+							style={{
+								visibility: claim ? 'visible' : 'hidden'
+							}}
+						>
+							<i className="fas fa-caret-left" />
+						</div>
+						<ButtonBox
+							onClick={() => {
+								setClaim(true);
+								setCost(false);
+								setPolicy(false);
+								setRisk(false);
+							}}
+							style={{
+								color: claim ? '#003478' : ''
+							}}
+						>
+							<img src={Claim} alt="" />Claim Assistance
+						</ButtonBox>
+					</Tabs>
+					<Tabs>
+						<div
+							style={{
+								visibility: policy ? 'visible' : 'hidden'
+							}}
+						>
+							<i className="fas fa-caret-left" />
+						</div>
+						<ButtonBox
+							onClick={() => {
+								setPolicy(true);
+								setCost(false);
+								setClaim(false);
+								setRisk(false);
+							}}
+							style={{
+								color: policy ? '#003478' : ''
+							}}
+						>
+							<img src={policyImage} alt="" />Accurate Policy Comparison
+						</ButtonBox>
+					</Tabs>
+					<Tabs>
+						<div
+							style={{
+								visibility: risk ? 'visible' : 'hidden'
+							}}
+						>
+							<i className="fas fa-caret-left" />
+						</div>
+						<ButtonBox
+							onClick={() => {
+								setRisk(true);
+								setCost(false);
+								setClaim(false);
+								setPolicy(false);
+							}}
+							style={{
+								color: risk ? '#003478' : ''
+							}}
+						>
+							<img src={riskImage} alt="" /> Objective Risk Assessment
+						</ButtonBox>
+					</Tabs>
 				</FirstPart>
 				<SecondPart>
 					{cost && <CostSaving />}
@@ -88,9 +124,10 @@ const Advantages = () => {
 };
 
 const StyledSection = styled(motion.div)`
-   
+    background: #F6F7FB;
     padding: 0rem 5rem;
     padding-bottom: 3rem;
+	padding-top: 2rem;
     @media (max-width: 1150px) {
 		padding: 0rem 3rem;
 	}
@@ -132,7 +169,22 @@ const SecondPart = styled.div`
 		width: 100%;
 	}
 `;
-
+const Tabs = styled.div`
+	position: relative;
+	i {
+		position: absolute;
+		font-size: 4rem;
+		color: #ffcc83;
+		top: 5%;
+		right: 101%;
+		@media (max-width: 1150px) {
+			font-size: 3rem;
+			transform: rotate(-91deg);
+			top: 65%;
+			right: 34%;
+		}
+	}
+`;
 const ButtonBox = styled(motion.div)`
     font-weight: bold;
     font-size: 1.5rem;

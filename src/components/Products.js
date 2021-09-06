@@ -48,7 +48,7 @@ const StyledSection = styled(motion.section)`
     padding: 0rem 5rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 	padding-bottom: 4rem;
 	@media (max-width: 1150px){
 		padding: 0rem 3rem;
