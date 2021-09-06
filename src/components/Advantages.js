@@ -5,6 +5,12 @@ import costSaving from '../Images/piggy-bank.png';
 import Claim from '../Images/claim.png';
 import policyImage from '../Images/risk-management.png';
 import riskImage from '../Images/market.png';
+//importing text of each
+import CostSaving from './AdvantageText/CostSaving';
+import ClaimText from './AdvantageText/Claim';
+import PolicyCompare from './AdvantageText/PolicyCompare';
+import ObjectiveRisk from './AdvantageText/ObjectiveRisk';
+
 const Advantages = () => {
 	const [ cost, setCost ] = useState(true);
 	const [ claim, setClaim ] = useState(false);
@@ -24,6 +30,9 @@ const Advantages = () => {
 							setPolicy(false);
 							setRisk(false);
 						}}
+						style={{
+							color: cost ? '#003478' : ''
+						}}
 					>
 						<img src={costSaving} alt="" /> Cost Saving
 					</ButtonBox>
@@ -33,6 +42,9 @@ const Advantages = () => {
 							setCost(false);
 							setPolicy(false);
 							setRisk(false);
+						}}
+						style={{
+							color: claim ? '#003478' : ''
 						}}
 					>
 						<img src={Claim} alt="" />Claim Assistance
@@ -44,6 +56,9 @@ const Advantages = () => {
 							setClaim(false);
 							setRisk(false);
 						}}
+						style={{
+							color: policy ? '#003478' : ''
+						}}
 					>
 						<img src={policyImage} alt="" />Accurate Policy Comparison
 					</ButtonBox>
@@ -54,22 +69,26 @@ const Advantages = () => {
 							setClaim(false);
 							setPolicy(false);
 						}}
+						style={{
+							color: risk ? '#003478' : ''
+						}}
 					>
 						<img src={riskImage} alt="" /> Objective Risk Assessment
 					</ButtonBox>
 				</FirstPart>
-				<div>
-					{cost && <div>cost saving very</div>}
-					{claim && <div>claim 3222222222222</div>}
-					{policy && <div>policy</div>}
-					{risk && <div>risk</div>}
-				</div>
+				<SecondPart>
+					{cost && <CostSaving />}
+					{claim && <ClaimText />}
+					{policy && <PolicyCompare />}
+					{risk && <ObjectiveRisk />}
+				</SecondPart>
 			</Flex>
 		</StyledSection>
 	);
 };
 
 const StyledSection = styled(motion.div)`
+   
     padding: 0rem 5rem;
     padding-bottom: 3rem;
     @media (max-width: 1150px) {
@@ -90,12 +109,28 @@ const Flex = styled.div`
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
+	@media (max-width: 1150px) {
+		flex-direction: column;
+	}
 `;
 
 const FirstPart = styled(motion.div)`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+	width: 35%;
+	 @media (max-width:1150px){
+		 flex-direction: row;
+		 width: 100%;
+		 justify-content: space-evenly;
+	 }
+`;
+
+const SecondPart = styled.div`
+	width: 60%;
+
+	@media (max-width: 1150px) {
+		width: 100%;
+	}
 `;
 
 const ButtonBox = styled(motion.div)`
@@ -111,6 +146,16 @@ const ButtonBox = styled(motion.div)`
     img {
         margin-right: 2rem;
     }
+	&:hover {
+		color: #003478;
+	}
+	 @media (max-width:1150px){
+		 font-size: 0rem;
+		 padding: 1rem 1rem;
+		 img {
+			 margin-right: 0rem;
+		 }
+	 }
 `;
 
 export default Advantages;
