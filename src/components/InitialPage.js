@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import SVG from './SVG';
-import picture from '../Images/family2.jpg';
+import picture from '../Images/family4.jpg';
 import Fade from 'react-reveal/Fade';
 
 const InitialPage = () => {
@@ -11,12 +11,12 @@ const InitialPage = () => {
 			<div className="part1">
 				<Fade left>
 					<LargeText>
-						<span style={{ color: 'white' }}>No worries,</span> we’ve got you covered!
+						<span style={{ color: '#F06F27' }}>No worries,</span> we’ve got you covered!
 					</LargeText>
 				</Fade>
 				<Fade right>
 					<SmallText>
-						Where <span style={{ color: 'white' }}>Service</span> is Priority
+						Where <span style={{ color: '#F06F27' }}>Service</span> is Priority
 					</SmallText>
 				</Fade>
 				<Buttons>
@@ -36,15 +36,16 @@ const StyledSection = styled(motion.section)`
     display: flex;
     justify-content: space-between;
     min-height: 85vh;
-   
     padding: 0rem 5rem;
     padding-top: 8rem;
-    background:url(${picture});
-    background-position: center;
+     background-image: url(${picture});
+      background-size: cover;
+       background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
     border-bottom-right-radius: 5%;
     border-bottom-left-radius: 5%;
+    position: relative;
     @media (max-width:1150px){
         flex-direction: column;
         justify-content: center;
@@ -62,6 +63,18 @@ const StyledSection = styled(motion.section)`
         padding: 0rem 1rem;
         padding-top: 5rem;
     }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      /* background-color: rgba(0,0,0,0.5); */
+      background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.0));
+       border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    }
 `;
 const LargeText = styled(motion.div)`
     font-size: 2.4rem;
@@ -69,6 +82,7 @@ const LargeText = styled(motion.div)`
     color: white;
     text-align: center;
     padding-top: 5rem;
+    opacity: 1;
     @media (max-width:500px){
         font-size: 1.8rem;
     }
@@ -78,6 +92,7 @@ const SmallText = styled(motion.div)`
     font-weight: lighter;
     padding-top: 1.5rem;
     text-align: center;
+    opacity: 1;
     color: white;
 `;
 
