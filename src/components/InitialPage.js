@@ -35,7 +35,7 @@ const InitialPage = () => {
 const StyledSection = styled(motion.section)`
     display: flex;
     justify-content: space-between;
-    min-height: 91vh;
+    min-height: 85vh;
    
     padding: 0rem 5rem;
     padding-top: 8rem;
