@@ -39,8 +39,8 @@ const Flex = styled.nav`
 	z-index: 100;
 	width: 100%;
 	padding: 0rem 5rem;
-
-	background-color: white;
+	justify-content: flex-end;
+	background-color: rgba(255, 255, 255, 0.8);
 	position: fixed;
 	@media (max-width: 1150px) {
 		padding: 0rem 3rem;
@@ -52,10 +52,7 @@ const Flex = styled.nav`
 	i {
 		font-size: 1rem;
 		color: white;
-		transition: all .3s ease-in;
-		&:hover {
-			color: #0493f1;
-		}
+		transition: all .2s ease-in;
 	}
 `;
 const Circle = styled.div`
@@ -67,6 +64,12 @@ const Circle = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin-right: 1rem;
+	cursor: pointer;
+	&:hover {
+		i {
+			color: #0493f1;
+		}
+	}
 `;
 
 const Whatsapp = styled.div`
@@ -80,12 +83,16 @@ const Whatsapp = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin-right: 1rem;
+
 	@media (max-width: 500px) {
 		font-size: 0.9rem;
 	}
 	i {
 		font-size: 1.6rem;
 		margin-right: .5rem;
+		&:hover {
+			color: #0493f1;
+		}
 	}
 `;
 

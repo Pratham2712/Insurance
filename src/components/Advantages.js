@@ -39,7 +39,7 @@ const Advantages = () => {
 								setRisk(false);
 							}}
 							style={{
-								color: cost ? '#003478' : ''
+								color: cost ? '#F06F27' : ''
 							}}
 						>
 							<img src={costSaving} alt="" /> Cost Saving
@@ -61,7 +61,7 @@ const Advantages = () => {
 								setRisk(false);
 							}}
 							style={{
-								color: claim ? '#003478' : ''
+								color: claim ? '#F06F27' : ''
 							}}
 						>
 							<img src={Claim} alt="" />Claim Assistance
@@ -83,7 +83,7 @@ const Advantages = () => {
 								setRisk(false);
 							}}
 							style={{
-								color: policy ? '#003478' : ''
+								color: policy ? '#F06F27' : ''
 							}}
 						>
 							<img src={policyImage} alt="" />Accurate Policy Comparison
@@ -105,7 +105,7 @@ const Advantages = () => {
 								setPolicy(false);
 							}}
 							style={{
-								color: risk ? '#003478' : ''
+								color: risk ? '#F06F27' : ''
 							}}
 						>
 							<img src={riskImage} alt="" /> Objective Risk Assessment
@@ -199,7 +199,7 @@ const ButtonBox = styled(motion.div)`
         margin-right: 2rem;
     }
 	&:hover {
-		color: #003478;
+		color: #F06F27;
 	}
 	 @media (max-width:1150px){
 		 font-size: 0rem;

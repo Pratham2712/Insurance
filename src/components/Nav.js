@@ -43,22 +43,22 @@ const Nav = () => {
 					className="back"
 				>
 					<li>
-						<a href="#">Insurance</a>
+						<a href="/">Insurance</a>
 					</li>
 					<li>
-						<a href="#">Renewals</a>
+						<a href="/">Renewals</a>
 					</li>
 					<li>
-						<a href="#">Claim</a>
+						<a href="/">Claim</a>
 					</li>
 					<li>
-						<a href="#">Blog</a>
+						<a href="/">Blog</a>
 					</li>
 					<li>
-						<a href="#">Contact</a>
+						<a href="/">Contact</a>
 					</li>
 					<li>
-						<a href="#">Become POS</a>
+						<a href="/">Become POS</a>
 					</li>
 					<li id="login-btn">
 						<button id="login">
@@ -85,8 +85,9 @@ const StyledNav = styled(motion.nav)`
     position: fixed;
     padding: 0rem 5rem;
 	transition: min-height .3s ease-in;
-	background-color: white;
+	background-color: rgba(255,255,255,0.8);
 	box-shadow: 0 8px 6px -6px grey;
+	
 	@media (max-width: 1150px) {
 		padding: 0rem 3rem;
 	}
@@ -177,20 +178,20 @@ const StyledNav = styled(motion.nav)`
 	`;
 
 const Image = styled.div`
-	background-color: inherit;
+	background: rgba(255, 255, 255, 0.0);
+	position: relative;
 	img {
-		width: 100%;
-		height: 10vh;
+		position: fixed;
 		object-fit: cover;
 		cursor: pointer;
-		background-color: white;
+		padding-bottom: 1rem;
+		top: 2%;
+
 		@media (max-width: 500px) {
-			width: 100%;
-			height: 8vh;
+			width: 50%;
 		}
 		@media (max-width: 1150px) {
-			width: 100%;
-			height: 9vh;
+			top: 9%;
 		}
 	}
 `;

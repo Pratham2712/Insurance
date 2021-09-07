@@ -26,10 +26,16 @@ const Card = styled(motion.div)`
     flex-direction: column;
     margin: 1.5rem 0rem;
     margin-right: 3rem;
-    border-radius: 0.2rem;
+    border-radius: 1rem;
     padding: 1rem 1rem;
     align-items: center;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    cursor: pointer;
+    transition: all .3s ease;box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    &:hover {
+        img {
+            transform: scale(0.9);
+        }
+    }
     @media (max-width: 1150px){
         width: 32%;
         margin-right: 0.5rem;
@@ -43,6 +49,7 @@ const Card = styled(motion.div)`
     img {
         width: 100%;
         object-fit: cover;
+        transition: all 0.3s ease;
         height: 7rem;
          @media (max-width: 500px){
              height: 4rem;

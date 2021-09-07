@@ -1,11 +1,11 @@
 export const productAnim = {
 	hidden: {
-		scale: 0.8
+		scale: 0.9
 	},
 	show: {
 		scale: 1,
 		transition: {
-			duration: 0.5,
+			duration: 0.3,
 			ease: 'easeOut'
 		}
 	}

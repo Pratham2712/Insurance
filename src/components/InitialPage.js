@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import SVG from './SVG';
+import picture from '../Images/family2.jpg';
 import Fade from 'react-reveal/Fade';
 
 const InitialPage = () => {
@@ -10,12 +11,12 @@ const InitialPage = () => {
 			<div className="part1">
 				<Fade left>
 					<LargeText>
-						<span style={{ color: '#EF6009' }}>No worries,</span> we’ve got you covered!
+						<span style={{ color: 'white' }}>No worries,</span> we’ve got you covered!
 					</LargeText>
 				</Fade>
 				<Fade right>
 					<SmallText>
-						Where <span style={{ color: '#EF6009' }}>Service</span> is Priority
+						Where <span style={{ color: 'white' }}>Service</span> is Priority
 					</SmallText>
 				</Fade>
 				<Buttons>
@@ -25,18 +26,25 @@ const InitialPage = () => {
 					</Fade>
 				</Buttons>
 			</div>
-			<div className="part2">
+			{/* <div className="part2">
 				<SVG />
-			</div>
+			</div> */}
 		</StyledSection>
 	);
 };
 const StyledSection = styled(motion.section)`
     display: flex;
     justify-content: space-between;
-    min-height: 88vh;
+    min-height: 91vh;
+   
     padding: 0rem 5rem;
     padding-top: 8rem;
+    background:url(${picture});
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
     @media (max-width:1150px){
         flex-direction: column;
         justify-content: center;
@@ -58,7 +66,7 @@ const StyledSection = styled(motion.section)`
 const LargeText = styled(motion.div)`
     font-size: 2.4rem;
     font-weight: bold;
-    color: #4A4A4A;
+    color: white;
     text-align: center;
     padding-top: 5rem;
     @media (max-width:500px){
@@ -70,7 +78,7 @@ const SmallText = styled(motion.div)`
     font-weight: lighter;
     padding-top: 1.5rem;
     text-align: center;
-    color: #4a4a4a;
+    color: white;
 `;
 
 const Buttons = styled(motion.div)`
