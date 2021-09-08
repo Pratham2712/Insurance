@@ -11,12 +11,12 @@ const InitialPage = () => {
 			<div className="part1">
 				<Fade left>
 					<LargeText>
-						<span style={{ color: '#F06F27' }}>No worries,</span> we’ve got you covered!
+						<span style={{ color: 'white' }}>No worries,</span> we’ve got you covered!
 					</LargeText>
 				</Fade>
 				<Fade right>
 					<SmallText>
-						Where <span style={{ color: '#F06F27' }}>Service</span> is Priority
+						Where <span style={{ color: 'white' }}>Service</span> is Priority
 					</SmallText>
 				</Fade>
 				<Buttons>
@@ -71,13 +71,13 @@ const StyledSection = styled(motion.section)`
       bottom: 0px;
       left: 0px;
       /* background-color: rgba(0,0,0,0.5); */
-      background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.0));
+      background: linear-gradient(to bottom, rgba(255,255,255,0.3),rgba(0,0,0,0.3),rgba(0,0,0,0.1));
        border-bottom-right-radius: 5%;
     border-bottom-left-radius: 5%;
     }
 `;
 const LargeText = styled(motion.div)`
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -88,7 +88,7 @@ const LargeText = styled(motion.div)`
     }
 `;
 const SmallText = styled(motion.div)`
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: lighter;
     padding-top: 1.5rem;
     text-align: center;

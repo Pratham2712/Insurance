@@ -6,6 +6,7 @@ import Insurance from './Insurance';
 
 const Nav = () => {
 	const [ toggle, setToggle ] = useState(false);
+	const [ colorChange, setColorchange ] = useState(false);
 
 	useEffect(() => {
 		const back = document.querySelector('.back');
@@ -15,24 +16,23 @@ const Nav = () => {
 			}
 		});
 	}, []);
-	/* const [ height, setHeight ] = useState(false);
-	const ourRef = useRef(null);
- */
-	/* useLayoutEffect(() => {
-		const topPosition = ourRef.current.getBoundingClientRect().top;
-		const onScroll = () => {
-			const scrollPosition = window.scrollY + window.innerHeight;
-			if (topPosition < scrollPosition) {
-				setHeight(!height);
-			}
-		};
+	const changeNavbarColor = () => {
+		if (window.scrollY >= 80) {
+			setColorchange(true);
+		} else {
+			setColorchange(false);
+		}
+	};
 
-		window.addEventListener('scroll', onScroll);
-		return () => window.removeEventListener('scroll', onScroll);
-	}, []); */
+	window.addEventListener('scroll', changeNavbarColor);
 
 	return (
-		<StyledNav>
+		<StyledNav
+			style={{
+				backgroundColor: colorChange ? 'rgba(255,255,255,0.8)' : '',
+				boxShadow: colorChange ? '0 8px 6px -6px grey' : ''
+			}}
+		>
 			<Image>
 				<img src={logosvg} alt="GodSpeed" />
 			</Image>
@@ -90,8 +90,7 @@ const StyledNav = styled(motion.nav)`
     position: fixed;
     padding: 0rem 5rem;
 	transition: min-height .3s ease-in;
-	background-color: rgba(255,255,255,0.8);
-	box-shadow: 0 8px 6px -6px grey;
+	background-color: rgba(255,255,255,0.0); 
 	
 	@media (max-width: 1150px) {
 		padding: 0rem 3rem;
@@ -101,9 +100,11 @@ const StyledNav = styled(motion.nav)`
 	}
    
 	a {
-		color: #4A4A4A;
+	
+		color: black;
 		text-decoration: none;
         cursor: pointer;
+	
 		@media (max-width: 1150px){
 			color: white;
 		}
@@ -178,7 +179,7 @@ const Li = styled.li`
 	padding-right: 1.3rem;
 	transition: all .3s ease;
 	transition: transform color .1s ease;
-	font-weight: bold;
+	font-weight: lighter;
 	@media (max-width: 1150px) {
 		padding: 1rem 0rem;
 		padding-left: 1.5rem;

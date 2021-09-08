@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import LightSpeed from 'react-reveal/LightSpeed';
 
 const UpperNav = () => {
+	const [ colorChange, setColorchange ] = useState(false);
+
+	const changeNavbarColor = () => {
+		if (window.scrollY >= 80) {
+			setColorchange(true);
+		} else {
+			setColorchange(false);
+		}
+	};
+
+	window.addEventListener('scroll', changeNavbarColor);
 	return (
-		<Flex>
+		<Flex
+			style={{
+				backgroundColor: colorChange ? 'rgba(255,255,255,0.8)' : ''
+			}}
+		>
 			<LightSpeed left cascade>
 				<Whatsapp>
 					<a href="/">
@@ -40,7 +55,7 @@ const Flex = styled.nav`
 	width: 100%;
 	padding: 0rem 5rem;
 	justify-content: flex-end;
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.0);
 	position: fixed;
 	@media (max-width: 1150px) {
 		padding: 0rem 3rem;

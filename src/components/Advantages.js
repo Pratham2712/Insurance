@@ -19,7 +19,7 @@ const Advantages = () => {
 	return (
 		<StyledSection>
 			<Head>
-				<h1>Why GodSpeed Insurance</h1>
+				<div>Why GodSpeed Insurance</div>
 			</Head>
 			<Flex>
 				<FirstPart>
@@ -128,11 +128,16 @@ const StyledSection = styled(motion.div)`
     padding: 0rem 5rem;
     padding-bottom: 3rem;
 	padding-top: 2rem;
+	height: 80vh;
     @media (max-width: 1150px) {
 		padding: 0rem 3rem;
+		height: 40vh;
+		padding-top: 2rem;
 	}
 	@media (max-width: 500px) {
 		padding: 0rem 1rem;
+		height: 65vh;
+		padding-top: 1rem;
 	}
 `;
 
@@ -140,6 +145,12 @@ const Head = styled.div`
 	text-align: center;
 	color: #003478;
 	margin-bottom: 4rem;
+	font-size: 2.5rem;
+	font-weight: bold;
+	@media (max-width: 500px) {
+		margin-bottom: 2rem;
+		font-size: 1.6rem;
+	}
 `;
 
 const Flex = styled.div`

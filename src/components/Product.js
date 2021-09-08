@@ -29,7 +29,7 @@ const Card = styled(motion.div)`
     border-radius: 1rem;
     padding: 1rem 1rem;
     align-items: center;
-    cursor: pointer;
+  
     transition: all .3s ease;box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     &:hover {
         img {
