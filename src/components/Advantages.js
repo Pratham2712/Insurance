@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import Slide from 'react-reveal/Slide';
+//Importing images
 import costSaving from '../Images/piggy-bank.png';
 import Claim from '../Images/claim.png';
 import policyImage from '../Images/risk-management.png';
@@ -23,94 +25,96 @@ const Advantages = () => {
 			</Head>
 			<Flex>
 				<FirstPart>
-					<Tabs>
-						<div
-							style={{
-								visibility: cost ? 'visible' : 'hidden'
-							}}
-						>
-							<i className="fas fa-caret-left" />
-						</div>
-						<ButtonBox
-							onClick={() => {
-								setCost(true);
-								setClaim(false);
-								setPolicy(false);
-								setRisk(false);
-							}}
-							style={{
-								color: cost ? '#F06F27' : ''
-							}}
-						>
-							<img src={costSaving} alt="" /> Cost Saving
-						</ButtonBox>
-					</Tabs>
-					<Tabs>
-						<div
-							style={{
-								visibility: claim ? 'visible' : 'hidden'
-							}}
-						>
-							<i className="fas fa-caret-left" />
-						</div>
-						<ButtonBox
-							onClick={() => {
-								setClaim(true);
-								setCost(false);
-								setPolicy(false);
-								setRisk(false);
-							}}
-							style={{
-								color: claim ? '#F06F27' : ''
-							}}
-						>
-							<img src={Claim} alt="" />Claim Assistance
-						</ButtonBox>
-					</Tabs>
-					<Tabs>
-						<div
-							style={{
-								visibility: policy ? 'visible' : 'hidden'
-							}}
-						>
-							<i className="fas fa-caret-left" />
-						</div>
-						<ButtonBox
-							onClick={() => {
-								setPolicy(true);
-								setCost(false);
-								setClaim(false);
-								setRisk(false);
-							}}
-							style={{
-								color: policy ? '#F06F27' : ''
-							}}
-						>
-							<img src={policyImage} alt="" />Accurate Policy Comparison
-						</ButtonBox>
-					</Tabs>
-					<Tabs>
-						<div
-							style={{
-								visibility: risk ? 'visible' : 'hidden'
-							}}
-						>
-							<i className="fas fa-caret-left" />
-						</div>
-						<ButtonBox
-							onClick={() => {
-								setRisk(true);
-								setCost(false);
-								setClaim(false);
-								setPolicy(false);
-							}}
-							style={{
-								color: risk ? '#F06F27' : ''
-							}}
-						>
-							<img src={riskImage} alt="" /> Objective Risk Assessment
-						</ButtonBox>
-					</Tabs>
+					<Slide right cascade>
+						<Tabs>
+							<div
+								style={{
+									visibility: cost ? 'visible' : 'hidden'
+								}}
+							>
+								<i className="fas fa-caret-left" />
+							</div>
+							<ButtonBox
+								onClick={() => {
+									setCost(true);
+									setClaim(false);
+									setPolicy(false);
+									setRisk(false);
+								}}
+								style={{
+									color: cost ? '#F06F27' : ''
+								}}
+							>
+								<img src={costSaving} alt="" /> Cost Saving
+							</ButtonBox>
+						</Tabs>
+						<Tabs>
+							<div
+								style={{
+									visibility: claim ? 'visible' : 'hidden'
+								}}
+							>
+								<i className="fas fa-caret-left" />
+							</div>
+							<ButtonBox
+								onClick={() => {
+									setClaim(true);
+									setCost(false);
+									setPolicy(false);
+									setRisk(false);
+								}}
+								style={{
+									color: claim ? '#F06F27' : ''
+								}}
+							>
+								<img src={Claim} alt="" />Claim Assistance
+							</ButtonBox>
+						</Tabs>
+						<Tabs>
+							<div
+								style={{
+									visibility: policy ? 'visible' : 'hidden'
+								}}
+							>
+								<i className="fas fa-caret-left" />
+							</div>
+							<ButtonBox
+								onClick={() => {
+									setPolicy(true);
+									setCost(false);
+									setClaim(false);
+									setRisk(false);
+								}}
+								style={{
+									color: policy ? '#F06F27' : ''
+								}}
+							>
+								<img src={policyImage} alt="" />Accurate Policy Comparison
+							</ButtonBox>
+						</Tabs>
+						<Tabs>
+							<div
+								style={{
+									visibility: risk ? 'visible' : 'hidden'
+								}}
+							>
+								<i className="fas fa-caret-left" />
+							</div>
+							<ButtonBox
+								onClick={() => {
+									setRisk(true);
+									setCost(false);
+									setClaim(false);
+									setPolicy(false);
+								}}
+								style={{
+									color: risk ? '#F06F27' : ''
+								}}
+							>
+								<img src={riskImage} alt="" /> Objective Risk Assessment
+							</ButtonBox>
+						</Tabs>
+					</Slide>
 				</FirstPart>
 				<SecondPart>
 					{cost && <CostSaving />}

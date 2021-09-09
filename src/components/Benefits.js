@@ -4,6 +4,8 @@ import bestPrice from '../Images/best-price.png';
 import support from '../Images/support.png';
 import dance from '../Images/dance.png';
 import money from '../Images/money.png';
+import LazyLoad from 'react-lazyload';
+import Fade from 'react-reveal/Fade';
 
 const Benefits = () => {
 	let BenefitData = [
@@ -34,14 +36,18 @@ const Benefits = () => {
 				<div> protect the future of the clients.</div>
 			</SubText>
 			<Flex>
-				{BenefitData.map(({ title, image }) => (
-					<Card>
-						<div>
-							<img src={image} alt="" />
-						</div>
-						<h4>{title}</h4>
-					</Card>
-				))}
+				<Fade bottom cascade>
+					{BenefitData.map(({ title, image }) => (
+						<Card key={Math.random() * BenefitData.length}>
+							<div>
+								<LazyLoad effect="blur">
+									<img src={image} alt="" />
+								</LazyLoad>
+							</div>
+							<h4>{title}</h4>
+						</Card>
+					))}
+				</Fade>
 			</Flex>
 		</StyledSection>
 	);
@@ -125,6 +131,7 @@ const Card = styled.div`
 	img {
 		width: 6rem;
 		height: 12vh;
+		object-fit: contain;
 		@media (max-width: 1150px) {
 			width: 4rem;
 			height: 8vh;
