@@ -131,12 +131,12 @@ const StyledSection = styled(motion.div)`
 	height: 80vh;
     @media (max-width: 1150px) {
 		padding: 0rem 3rem;
-		height: 40vh;
+		height: 56vh;
 		padding-top: 2rem;
 	}
 	@media (max-width: 500px) {
 		padding: 0rem 1rem;
-		height: 65vh;
+		height: 66vh;
 		padding-top: 1rem;
 	}
 `;

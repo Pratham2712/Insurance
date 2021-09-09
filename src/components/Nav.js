@@ -99,16 +99,7 @@ const StyledNav = styled(motion.nav)`
 		padding: 0rem 1rem;
 	}
    
-	a {
 	
-		color: black;
-		text-decoration: none;
-        cursor: pointer;
-	
-		@media (max-width: 1150px){
-			color: white;
-		}
-	}
     #login {
 		font-size: 1.2rem;
         cursor: pointer;
@@ -180,12 +171,21 @@ const Li = styled.li`
 	transition: all .3s ease;
 	transition: transform color .1s ease;
 	font-weight: lighter;
+	color: black;
 	@media (max-width: 1150px) {
 		padding: 1rem 0rem;
 		padding-left: 1.5rem;
 		width: 60%;
 		background-color: #282828;
 		transition: all .3s ease;
+	}
+	a {
+		text-decoration: none;
+		cursor: pointer;
+		color: black;
+		@media (max-width: 1150px) {
+			color: white;
+		}
 	}
 	&:hover {
 		transform: scale(0.96);
