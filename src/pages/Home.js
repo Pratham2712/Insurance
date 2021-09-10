@@ -4,6 +4,7 @@ import Products from '../components/Products';
 import Advantages from '../components/Advantages';
 import Benefits from '../components/Benefits';
 import Contact from '../components/contact';
+import Footer from '../components/Footer';
 const Home = () => {
 	return (
 		<main>
@@ -12,6 +13,7 @@ const Home = () => {
 			<Advantages />
 			<Benefits />
 			<Contact />
+			<Footer />
 		</main>
 	);
 };

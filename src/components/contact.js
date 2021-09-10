@@ -45,16 +45,19 @@ const contact = () => {
 	);
 };
 const StyledSection = styled.section`
-	min-height: 100vh;
+	min-height: 60vh;
 	padding: 0rem 5rem;
 	padding-top: 4rem;
+	padding-bottom: 2rem;
 	@media (max-width: 1150px) {
 		padding: 0rem 3rem;
 		padding-top: 4rem;
+		padding-bottom: 2rem;
 	}
 	@media (max-width: 500px) {
 		padding: 0rem 1rem;
 		padding-top: 2rem;
+		padding-bottom: 2rem;
 	}
 `;
 
@@ -71,6 +74,7 @@ const Head = styled.div`
 const Flex = styled.div`
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	@media (max-width: 1150px) {
 		flex-direction: column-reverse;
 	}

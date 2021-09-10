@@ -135,7 +135,7 @@ const StyledNav = styled(motion.nav)`
 		position: relative;
 		span {
 			margin-left: 0.3rem;
-			align-self: center;
+			
 		}
 	}
 	
@@ -146,7 +146,7 @@ const StyledNav = styled(motion.nav)`
 		top: 100%;
 		
 		width: 10rem;
-		left: -50%;
+		left: -20%;
 	}
 	.dropbtn:hover .insurance-content {
 		opacity: 1;

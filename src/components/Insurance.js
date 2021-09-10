@@ -38,7 +38,6 @@ const Insurance = () => {
 const Types = styled.div`
 	background: white;
 	width: 12rem;
-	text-align: center;
 	border-radius: 0.5rem;
 	li {
 		list-style-type: none;
