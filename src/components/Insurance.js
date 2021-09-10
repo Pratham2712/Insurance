@@ -6,19 +6,29 @@ const Insurance = () => {
 		<Types>
 			<ul>
 				<li>
-					<a href="/">Car Insurance</a>
+					<a style={{ color: '#4a4a4a', textDecoration: 'none' }} href="/">
+						Car Insurance
+					</a>
 				</li>
 				<li>
-					<a href="/">Bike Insurance</a>
+					<a style={{ color: '#4a4a4a', textDecoration: 'none' }} href="/">
+						Bike Insurance
+					</a>
 				</li>
 				<li>
-					<a href="/">Health Insurance</a>
+					<a style={{ color: '#4a4a4a', textDecoration: 'none' }} href="/">
+						Health Insurance
+					</a>
 				</li>
 				<li>
-					<a href="/">Life Insurance</a>
+					<a style={{ color: '#4a4a4a', textDecoration: 'none' }} href="/">
+						Life Insurance
+					</a>
 				</li>
 				<Li>
-					<a href="/">Travel Insurance</a>
+					<a style={{ color: '#4a4a4a', textDecoration: 'none' }} href="/">
+						Travel Insurance
+					</a>
 				</Li>
 			</ul>
 		</Types>
@@ -33,14 +43,12 @@ const Types = styled.div`
 	li {
 		list-style-type: none;
 		padding: 0.5rem 1rem;
-		a {
-			text-decoration: none;
-			color: #4a4a4a;
-			transition: all .3s ease;
-			&:hover {
-				color: #4a4a4a;
-				padding-left: 1rem;
-			}
+	}
+	a {
+		transition: all .2s ease;
+		&:hover {
+			text-decoration: underline;
+			padding-left: 1rem;
 		}
 	}
 `;
