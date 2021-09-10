@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
+import LazyLoad from 'react-lazyload';
+//Importing images
 import bestPrice from '../Images/best-price.png';
 import support from '../Images/support.png';
 import dance from '../Images/dance.png';
 import money from '../Images/money.png';
-import LazyLoad from 'react-lazyload';
-import Fade from 'react-reveal/Fade';
 
 const Benefits = () => {
 	let BenefitData = [
@@ -116,17 +117,21 @@ const Card = styled.div`
 	background-color: white;
 	text-align: center;
 	border: 1px solid gray;
-	padding: 0.5rem 1.8rem;
+	padding: 0.9rem 0rem;
 	margin: 0rem 2rem;
+	width: 10rem;
+	height: 9rem;
 	border-radius: 1rem;
 	@media (max-width: 1150px) {
-		margin: 0rem 2rem;
-		padding: 0.3rem 1.9rem;
+		margin: 0rem 1rem;
+		padding: 1rem 0.3rem;
+		width: 9rem;
 	}
 	@media (max-width: 500px) {
-		margin: 0rem 0.5rem;
-		padding: 0.3rem 1rem;
-		width: 20%;
+		margin: 0rem 0.2rem;
+		width: 5rem;
+		height: 6rem;
+		padding: 0.3rem 0rem;
 	}
 	img {
 		width: 6rem;

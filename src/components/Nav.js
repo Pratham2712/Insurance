@@ -45,6 +45,9 @@ const Nav = () => {
 				>
 					<Li className="dropbtn">
 						<a href="/">Insurance</a>
+						<span>
+							<i className="fas fa-angle-down" />
+						</span>
 
 						<div className="insurance-content">
 							<Insurance />
@@ -130,15 +133,20 @@ const StyledNav = styled(motion.nav)`
 		}
 	.dropbtn {
 		position: relative;
+		span {
+			margin-left: 0.3rem;
+			align-self: center;
+		}
 	}
 	
 	.insurance-content {
 		opacity: 0;
 		position: absolute;
 		display: none;
-		background-color: rgba(255,255,255,0.8);
 		top: 100%;
+		
 		width: 10rem;
+		left: -50%;
 	}
 	.dropbtn:hover .insurance-content {
 		opacity: 1;
@@ -178,6 +186,9 @@ const Li = styled.li`
 		width: 60%;
 		background-color: #282828;
 		transition: all .3s ease;
+		span {
+			color: white;
+		}
 	}
 	a {
 		text-decoration: none;
@@ -195,6 +206,9 @@ const Li = styled.li`
 		}
 		@media (max-width: 1150px) {
 			transform: scale(1);
+		}
+		span {
+			color: #ef6009;
 		}
 	}
 `;

@@ -195,7 +195,7 @@ const Tabs = styled.div`
 		@media (max-width: 1150px) {
 			font-size: 3rem;
 			transform: rotate(-91deg);
-			top: 65%;
+			top: 81%;
 			right: 34%;
 		}
 	}

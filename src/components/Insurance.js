@@ -17,20 +17,33 @@ const Insurance = () => {
 				<li>
 					<a href="/">Life Insurance</a>
 				</li>
-				<li>
+				<Li>
 					<a href="/">Travel Insurance</a>
-				</li>
+				</Li>
 			</ul>
 		</Types>
 	);
 };
 
 const Types = styled.div`
-	li:hover {
+	background: white;
+	width: 12rem;
+	text-align: center;
+	border-radius: 0.5rem;
+	li {
+		list-style-type: none;
+		padding: 0.5rem 1rem;
 		a {
-			color: black;
+			text-decoration: none;
+			color: #4a4a4a;
+			transition: all .3s ease;
+			&:hover {
+				color: #4a4a4a;
+				padding-left: 1rem;
+			}
 		}
 	}
 `;
 
+const Li = styled.li`color: black;`;
 export default Insurance;
