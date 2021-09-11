@@ -83,13 +83,13 @@ const Nav = () => {
 };
 
 const StyledNav = styled(motion.nav)`
-    min-height: 10vh;
+    min-height: 8vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	z-index: 100;
     width: 100%;
-	top: 8vh;
+	top: 6vh;
     position: fixed;
     padding: 0rem 5rem;
 	transition: min-height .3s ease-in;
@@ -221,14 +221,15 @@ const Image = styled.div`
 		object-fit: cover;
 		cursor: pointer;
 		padding-bottom: 1rem;
-		top: 3%;
+		top: 1%;
 		width: 25%;
-		@media (max-width: 500px) {
+		@media (max-width: 1150px) {
+			top: 4%;
 			width: 50%;
 		}
-		@media (max-width: 1150px) {
-			top: 9%;
-			width: 41%;
+		@media (max-width: 500px) {
+			top: 7%;
+			width: 47%;
 		}
 	}
 `;

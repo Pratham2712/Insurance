@@ -48,7 +48,7 @@ const UpperNav = () => {
 };
 
 const Flex = styled.nav`
-	min-height: 8vh;
+	min-height: 6vh;
 	display: flex;
 	align-items: center;
 	z-index: 100;
