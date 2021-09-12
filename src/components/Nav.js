@@ -107,18 +107,17 @@ const StyledNav = styled(motion.nav)`
 		font-size: 1.2rem;
         cursor: pointer;
         margin-left: 1.5rem;
-        padding: 0.1rem 0.4rem;
+        padding: 0.3rem 0.7rem;
         background: transparent;
         margin-top: -7px;
         transition: all .3s ease;
         border-radius: 0.2rem;
-        border: 2px solid #0493F1;
+		border: none;
         background-color: #0493F1;
         color: white;
         &:hover {
-			color: black;
-            border: 2px solid #0493F1;
-            background-color: white;
+		    
+            background-color: #003478;
 		}
 		
 	}

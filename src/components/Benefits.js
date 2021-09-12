@@ -121,11 +121,12 @@ const Card = styled.div`
 	margin: 0rem 2rem;
 	width: 10rem;
 	height: 9rem;
-	border-radius: 1rem;
+	border-radius: 0.3rem;
 	@media (max-width: 1150px) {
 		margin: 0rem 1rem;
 		padding: 1rem 0.3rem;
-		width: 9rem;
+		width: 10rem;
+		height: 11rem;
 	}
 	@media (max-width: 500px) {
 		margin: 0rem 0.2rem;

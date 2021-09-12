@@ -26,7 +26,7 @@ const Card = styled(motion.div)`
     flex-direction: column;
     margin: 1.5rem 0rem;
     margin-right: 3rem;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
     padding: 1rem 1rem;
     align-items: center;
   
