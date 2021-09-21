@@ -111,17 +111,18 @@ const Flex = styled.div`
 	@media (max-width: 500px) {
 		bottom: -35%;
 	}
-`;
+	`;
 
 const Card = styled.div`
 	background-color: white;
 	text-align: center;
-	border: 1px solid gray;
+    border-bottom: 3px solid #F06F27;
 	padding: 0.9rem 0rem;
 	margin: 0rem 2rem;
 	width: 10rem;
 	height: 9rem;
 	border-radius: 0.3rem;
+	box-shadow: 0 6px 16px rgb(52 105 203 / 16%);
 	@media (max-width: 1150px) {
 		margin: 0rem 1rem;
 		padding: 1rem 0.3rem;
@@ -149,10 +150,12 @@ const Card = styled.div`
 	}
 	h4 {
 		margin-top: 1rem;
+	    color: #003478;
 		@media (max-width: 500px) {
 			font-size: 0.7rem;
 			margin-top: 0.5rem;
 		}
+		
 	}
 `;
 export default Benefits;

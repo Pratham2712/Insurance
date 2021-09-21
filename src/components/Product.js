@@ -30,7 +30,9 @@ const Card = styled(motion.div)`
     padding: 1rem 1rem;
     align-items: center;
   
-    transition: all .3s ease;box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    transition: all .3s ease;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    box-shadow: 0 6px 16px rgb(52 105 203 / 16%);
     &:hover {
         img {
             transform: scale(0.9);
@@ -47,10 +49,10 @@ const Card = styled(motion.div)`
 
     }
     img {
-        width: 100%;
+        width: 80%;
         object-fit: cover;
         transition: all 0.3s ease;
-        height: 7rem;
+
          @media (max-width: 500px){
              height: 4rem;
          }

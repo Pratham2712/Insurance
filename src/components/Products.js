@@ -2,41 +2,48 @@ import React from 'react';
 import Product from './Product';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+//import icon
+import carInsurance from '../Images/car-insurance.png'
+import health from '../Images/healthcare.png'
+import motor from '../Images/motorcycle.png'
+import travel from '../Images/travel-insurance.png'
+import life from '../Images/life-insurance.png'
 
 const Products = () => {
 	const products = [
 		{
-			url: 'https://www.squareinsurance.in/assets/img/car-insurance.svg',
+			url: carInsurance,
 			title: 'Car'
 		},
 		{
-			url: 'https://www.squareinsurance.in/assets/img/health-insurance.svg',
+			url: health,
 			title: 'Health'
 		},
 		{
-			url: 'https://www.squareinsurance.in/assets/img/bike-insurance.svg',
+			url: motor,
 			title: 'Bike'
 		},
 		{
-			url: 'https://www.squareinsurance.in/assets/img/travel-insurance.svg',
+			url: travel,
 			title: 'Travel'
 		},
 		{
-			url: 'https://www.squareinsurance.in/assets/img/travel-insurance.svg',
+			url: life,
+			title: 'Life'
+		},
+		{
+			url: travel,
 			title: 'Travel'
 		},
 		{
-			url: 'https://www.squareinsurance.in/assets/img/travel-insurance.svg',
+			url: travel,
 			title: 'Travel'
 		},
 		{
-			url: 'https://www.squareinsurance.in/assets/img/travel-insurance.svg',
+			url: travel,
 			title: 'Travel'
 		},
-		{
-			url: 'https://www.squareinsurance.in/assets/img/travel-insurance.svg',
-			title: 'Travel'
-		}
+		
 	];
 	return (
 		<StyledSection>
