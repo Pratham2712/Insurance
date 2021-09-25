@@ -6,6 +6,7 @@ import About from '../components/About';
 import Benefits from '../components/Benefits';
 import Contact from '../components/contact';
 import Footer from '../components/Footer';
+import Parterns from '../components/Parterns';
 const Home = () => {
 	return (
 		<main>
@@ -14,6 +15,7 @@ const Home = () => {
 			<Advantages />
 			<About />
 			<Benefits />
+			<Parterns/>
 			<Contact />
 			<Footer />
 		</main>
