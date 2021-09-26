@@ -7,6 +7,7 @@ import Insurance from './Insurance';
 const Nav = () => {
 	const [ toggle, setToggle ] = useState(false);
 	const [ colorChange, setColorchange ] = useState(false);
+	
 
 	useEffect(() => {
 		const back = document.querySelector('.back');
@@ -26,12 +27,16 @@ const Nav = () => {
 
 	window.addEventListener('scroll', changeNavbarColor);
 
+	
+
 	return (
 		<StyledNav
 			style={{
 				backgroundColor: colorChange ? 'rgba(255,255,255,0.8)' : '',
-				boxShadow: colorChange ? '0 8px 6px -6px grey' : ''
+				boxShadow: colorChange ? '0 8px 6px -6px grey' : '',
+			
 			}}
+		
 		>
 			<Image>
 				<img src={logosvg} alt="GodSpeed" />

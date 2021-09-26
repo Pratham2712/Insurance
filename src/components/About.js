@@ -1,12 +1,17 @@
-import React from 'react'
+import React,{useState} from 'react'
+//import images
 import styled from 'styled-components';
 import discussImage from '../Images/aboutImage.jpg'
 import google from '../Images/google.svg'
 import star from '../Images/star.png'
 import aboutContent from '../Images/about-content.jpg'
+//for animation of number counter
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 
 const About = () => {
+    const [animate, setAnimate] = useState(false);
     return (
         <StyledSection>
             <AboutContent>
@@ -20,12 +25,34 @@ const About = () => {
                         <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fugiat iste illum dolores nesciunt ad? Facere illo a sequi nobis perferendis dignissimos voluptatibus optio.</Text>
                     </div>
                     <Flex>
-                        <div>
-                        <span className="title" > 27+ </span> <br />
+                    <div>
+                        <CountUp start={animate ? 0 : null} end={27} duration={1.5} redraw={true}>
+            {({ countUpRef }) => (
+              <div>
+                <span ref={countUpRef} className="title" />
+                <VisibilitySensor
+                  onChange={isVisible => {
+                    if (isVisible) {
+                      setAnimate(true);
+                    } 
+                  }}
+                >
+                  <span className="title" >+</span>
+                </VisibilitySensor>
+              </div>
+            )}
+          </CountUp>
                         <span className="subTitle">insurers</span>
                         </div>
-                        <div>
-                            <span className="title">500+</span> <br />
+                    <div>
+                         <CountUp start={animate ? 0 : null} end={500} duration={1.5} redraw={true}>
+                            {({ countUpRef }) => (
+                             <div>
+                                    <span ref={countUpRef} className="title" />
+                            <span className="title" >+</span>
+                            </div>
+                            )}
+                            </CountUp>
                            <span className="subTitle"> statisfied customers </span>
                         </div>
                         <div>

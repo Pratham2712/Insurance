@@ -7,6 +7,7 @@ import bestPrice from '../Images/best-price.png';
 import support from '../Images/support.png';
 import dance from '../Images/dance.png';
 import money from '../Images/money.png';
+import { Fragment } from 'react';
 
 const Benefits = () => {
 	let BenefitData = [
@@ -29,6 +30,7 @@ const Benefits = () => {
 	];
 	return (
 		<StyledSection>
+			<div>
 			<MainText>
 				<span style={{ color: '#F06F27' }}>Godspeed</span> Ensure Professional Insurance Services.
 			</MainText>
@@ -36,6 +38,8 @@ const Benefits = () => {
 				Making best use of market, we provide the best insurance and
 				<div> protect the future of the clients.</div>
 			</SubText>
+			</div>
+			<div>
 			<Flex>
 				<Fade bottom cascade>
 					{BenefitData.map(({ title, image }) => (
@@ -50,6 +54,7 @@ const Benefits = () => {
 					))}
 				</Fade>
 			</Flex>
+			</div>
 		</StyledSection>
 	);
 };
@@ -57,24 +62,27 @@ const Benefits = () => {
 const StyledSection = styled.div`
 	min-height: 50vh;
 	background: #003478;
-	padding: 0rem 5rem;
-	padding-bottom: 3rem;
+	padding: 0.5rem 5rem;
 	margin-bottom: 5rem;
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	@media (max-width: 1150px) {
-		padding: 0rem 3rem;
-		min-height: 30vh;
+		padding: 0.5rem 3rem;
+	
 	}
 	@media (max-width: 500px) {
-		padding: 0rem 1rem;
+		padding: 0.5rem 1rem;
+		min-height: 40vh;
 	}
+	
 `;
 
 const MainText = styled.div`
 	text-align: center;
 	font-size: 2.5rem;
 	color: white;
-	padding-top: 4rem;
+	padding-top: 0rem;
 	font-weight: bold;
 	@media (max-width: 1150px) {
 		font-size: 2.5rem;
@@ -92,6 +100,7 @@ const SubText = styled.div`
 	color: white;
 	padding-top: 1rem;
 	font-weight: lighter;
+
 	@media (max-width: 500px) {
 		font-size: 0.8rem;
 		padding-top: 0.9rem;
@@ -100,18 +109,10 @@ const SubText = styled.div`
 
 const Flex = styled.div`
 	display: flex;
-	position: absolute;
-	bottom: -24%;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-	@media (max-width: 1150px) {
-		bottom: -25%;
-	}
-	@media (max-width: 500px) {
-		bottom: -35%;
-	}
-	`;
+    align-items: center;
+	justify-content: center;
+	
+	`
 
 const Card = styled.div`
 	background-color: white;
