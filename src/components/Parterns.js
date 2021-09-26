@@ -68,7 +68,7 @@ const Slider = styled.div`
     .slide-track {
          display: flex;
          width: calc(250px * 9);
-         animation: scroll 50s linear infinite;
+         animation: scroll 40s linear infinite;
          &:hover {
              animation-play-state: paused;
          }
@@ -85,11 +85,15 @@ const Slider = styled.div`
     }
     img {
         padding: 0rem 5rem;
-        background: rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.1);
+        transition: all 0.2s ease-in-out;
         @media (max-width: 500px) {
 		padding: 0rem 2rem;
         width: 90%;
 	}
+    &:hover {
+        transform: scale(0.95);
+    }
     }
 
     @keyframes scroll {
@@ -97,7 +101,7 @@ const Slider = styled.div`
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-250px * 9));
+            transform: translateX(calc(-250px * 4.5));
         }
     }
 `

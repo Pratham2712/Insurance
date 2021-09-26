@@ -53,6 +53,7 @@ const StyledSection = styled.section`
     padding: 0rem 5rem;
     display: flex;
     align-items: center;
+   width: 100%;
     position: relative;
     @media (max-width: 1150px) {
 		padding: 0rem 3rem;
@@ -117,7 +118,7 @@ const Flex = styled.div`
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    margin-top: -2rem;
+    margin-top: -2.5rem;
     div {
         padding-right: 0.1rem;
     }
@@ -148,7 +149,7 @@ const Text = styled.div`
 `
 const Contact = styled.div`
     text-align: center;
-    padding-top: 0.5rem;
+    padding-top: 0.8rem;
   
     button {
         font-size: 1.3rem;
