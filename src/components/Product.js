@@ -53,7 +53,8 @@ const Card = styled(motion.div)`
         transition: all 0.3s ease;
 
          @media (max-width: 500px){
-             height: 4rem;
+            height: 4.3rem;
+    width: 100%;
          }
 
     }

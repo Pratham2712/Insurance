@@ -7,7 +7,6 @@ import bestPrice from '../Images/best-price.png';
 import support from '../Images/support.png';
 import dance from '../Images/dance.png';
 import money from '../Images/money.png';
-import { Fragment } from 'react';
 
 const Benefits = () => {
 	let BenefitData = [
@@ -63,7 +62,7 @@ const StyledSection = styled.div`
 	min-height: 50vh;
 	background: #003478;
 	padding: 0.5rem 5rem;
-	margin-bottom: 5rem;
+	margin-bottom: 4rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -74,6 +73,7 @@ const StyledSection = styled.div`
 	@media (max-width: 500px) {
 		padding: 0.5rem 1rem;
 		min-height: 40vh;
+		margin-bottom: 2.5rem;
 	}
 	
 `;

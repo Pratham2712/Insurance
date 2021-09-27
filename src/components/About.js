@@ -8,6 +8,8 @@ import aboutContent from '../Images/about-content.jpg'
 //for animation of number counter
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+//lazyload
+import LazyLoad from 'react-lazyload';
 
 
 const About = () => {
@@ -19,14 +21,16 @@ const About = () => {
                     <div className="heading">About Us</div>
                    
                     <div style={{display:"flex",justifyContent: "space-evenly",alignItems: "center"}}>
-            <Image>
+                    <Image>
+                        <LazyLoad effect="blur">
                 <img src={aboutContent} alt="" />
+                </LazyLoad>
             </Image>
                         <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fugiat iste illum dolores nesciunt ad? Facere illo a sequi nobis perferendis dignissimos voluptatibus optio.</Text>
                     </div>
                     <Flex>
                     <div>
-                        <CountUp start={animate ? 0 : null} end={27} duration={1.5} redraw={true}>
+                       <CountUp start={animate ? 0 : null} end={27} duration={1.5} redraw={true}>
             {({ countUpRef }) => (
               <div>
                 <span ref={countUpRef} className="title" />

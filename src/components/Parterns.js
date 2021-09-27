@@ -42,12 +42,12 @@ const Parterns = () => {
 }
 
 const StyledSection = styled.section`
-    padding: 3rem 5rem;
+    padding: 0rem 5rem;
     @media (max-width: 1150px) {
-		padding: 3rem 3rem;
+		padding: 0rem 3rem;
 	}
 	@media (max-width: 500px) {
-		padding: 3rem 1rem;
+		padding: 0rem 1rem;
 	}
 `
 
