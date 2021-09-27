@@ -115,6 +115,9 @@ const Flex = styled.div`
 	`
 
 const Card = styled.div`
+    display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 	background-color: white;
 	text-align: center;
     border-bottom: 3px solid #F06F27;

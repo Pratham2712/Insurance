@@ -132,16 +132,18 @@ const StyledSection = styled(motion.div)`
     padding: 0rem 5rem;
     padding-bottom: 3rem;
 	padding-top: 2rem;
-	height: 80vh;
+	min-height: 80vh;
     @media (max-width: 1150px) {
 		padding: 0rem 3rem;
-		height: 56vh;
-		padding-top: 2rem;
+    padding-top: 2rem;
+    min-height: 53vh;
+    height: 59vh;
 	}
 	@media (max-width: 500px) {
 		padding: 0rem 1rem;
-		height: 66vh;
-		padding-top: 1rem;
+    min-height: 53vh;
+    padding-top: 1rem;
+    height: 67vh;
 	}
 `;
 

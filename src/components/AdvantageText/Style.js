@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Box = styled.div`
 	overflow-y: hidden;
+	height: 53vh;
 	h2 {
 		text-align: center;
 		margin-top: 2rem;
