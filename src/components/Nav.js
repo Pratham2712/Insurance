@@ -232,8 +232,9 @@ const Image = styled.div`
 			width: 50%;
 		}
 		@media (max-width: 500px) {
-			top: 7%;
-			width: 47%;
+			top: 6%;
+    width: 56%;
+    height: 10vh;
 		}
 	}
 `;
