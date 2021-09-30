@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import logosvg from '../Images/logo.svg';
 import Insurance from './Insurance';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
 	const [ toggle, setToggle ] = useState(false);
@@ -32,14 +33,16 @@ const Nav = () => {
 	return (
 		<StyledNav
 			style={{
-				backgroundColor: colorChange ? 'rgba(255,255,255,0.8)' : '',
+				backgroundColor: colorChange ? 'var(--nav-bg)' : '',
 				boxShadow: colorChange ? '0 8px 6px -6px grey' : '',
 			
 			}}
 		
 		>
 			<Image>
+				<Link to="/">
 				<img src={logosvg} alt="GodSpeed" />
+				</Link>
 			</Image>
 			<div>
 				<Ul
@@ -68,7 +71,7 @@ const Nav = () => {
 						<a href="/">Blog</a>
 					</Li>
 					<Li>
-						<a href="/">Contact</a>
+						<Link to="/contact">Contact</Link>
 					</Li>
 					<Li>
 						<a href="/">Become POS</a>
@@ -118,11 +121,11 @@ const StyledNav = styled(motion.nav)`
         transition: all .3s ease;
         border-radius: 0.2rem;
 		border: none;
-        background-color: #0493F1;
+        background-color: var(--light-blue);
         color: white;
         &:hover {
 		    
-            background-color: #003478;
+            background-color: var(--dark-blue);
 		}
 		
 	}
@@ -183,12 +186,11 @@ const Li = styled.li`
 	transition: all .3s ease;
 	transition: transform color .1s ease;
 	font-weight: lighter;
-	color: black;
 	@media (max-width: 1150px) {
 		padding: 1rem 0rem;
 		padding-left: 1.5rem;
 		width: 60%;
-		background-color: #282828;
+		background-color: black;
 		transition: all .3s ease;
 		span {
 			color: white;
@@ -205,14 +207,14 @@ const Li = styled.li`
 	&:hover {
 		transform: scale(0.96);
 		a {
-			color: #ef6009;
+			color: var(--logo-orange);
 			text-decoration: underline;
 		}
 		@media (max-width: 1150px) {
 			transform: scale(1);
 		}
 		span {
-			color: #ef6009;
+			color: var(--logo-orange);
 		}
 	}
 `;

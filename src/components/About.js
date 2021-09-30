@@ -128,7 +128,7 @@ const AboutContent = styled.div`
     justify-content: space-around;
     .heading {
     text-align: center;
-	color: #003478;
+	color: var(--dark-blue);
 	font-size: 2.5rem;
 	font-weight: bold;
     margin-top: 0.2rem;
@@ -155,7 +155,7 @@ const Flex = styled.div`
     }
     .title {
         font-size: 1.7rem;
-        color:  #F06F27;
+        color:  var(--logo-orange);
         font-weight: bold;
         letter-spacing: 2px;
         @media (max-width: 500px) {
@@ -164,7 +164,7 @@ const Flex = styled.div`
     }
     .subTitle {
         font-size: 1.3rem;
-        color: #003478;
+        color: var(--dark-blue);
         letter-spacing: 1px;
         @media (max-width: 500px) {
 		font-size: 1rem;
@@ -192,7 +192,7 @@ const Contact = styled.div`
         border-radius: 0.2rem;
         letter-spacing: 3px;
 		border: none;
-        background-color: #0493F1;
+        background-color: var(--light-blue);
         color: white;
         @media (max-width: 500px) {
 		font-size: 1rem;
@@ -200,7 +200,7 @@ const Contact = styled.div`
 	}
         &:hover {
 		    
-            background-color: #003478;
+            background-color: var(--dark-blue);
 		}
     }
 `

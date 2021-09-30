@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import SVG from './SVG';
 import picture from '../Images/family4.jpg';
 import Fade from 'react-reveal/Fade';
 
@@ -109,8 +108,8 @@ const Buttons = styled(motion.div)`
         background: transparent;
         transition: all .3s ease;
         border-radius: 0.2rem;
-        border: 2px solid #0493F1;
-        background-color: #0493F1;
+        border: 2px solid var(--light-blue);
+        background-color: var(--light-blue);
         color: white;
         margin-left: 4rem;
         font-weight: lighter;

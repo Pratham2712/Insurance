@@ -90,7 +90,7 @@ const Footer = () => {
 const StyledFooter = styled.footer`
 	display: flex;
 	flex-direction: column;
-	background: #4a4a4a;
+	background: var(--light-black);
 	padding: 2rem 5rem;
 	@media (max-width: 1150px) {
 		padding: 2rem 3rem;

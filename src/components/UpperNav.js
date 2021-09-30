@@ -17,7 +17,7 @@ const UpperNav = () => {
 	return (
 		<Flex
 			style={{
-				backgroundColor: colorChange ? 'rgba(255,255,255,0.8)' : ''
+				backgroundColor: colorChange ? 'var(--nav-bg)' : ''
 			}}
 		>
 			<LightSpeed left cascade>
@@ -74,7 +74,7 @@ const Circle = styled.div`
 	width: 1.8rem;
 	height: 1.8rem;
 	border-radius: 50%;
-	background-color: #4a4a4a;
+	background-color: var(--light-black);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -82,7 +82,7 @@ const Circle = styled.div`
 	cursor: pointer;
 	&:hover {
 		i {
-			color: #0493f1;
+			color: var(--light-blue);
 		}
 	}
 `;
@@ -90,7 +90,7 @@ const Circle = styled.div`
 const Whatsapp = styled.div`
 	width: max-content;
 	height: 2rem;
-	background-color: #4a4a4a;
+	background-color: var(--light-black);
 	color: white;
 	padding: 1rem 1rem;
 	border-radius: 1rem;
@@ -106,7 +106,7 @@ const Whatsapp = styled.div`
 		font-size: 1.6rem;
 		margin-right: .5rem;
 		&:hover {
-			color: #0493f1;
+			color: var(--light-blue);
 		}
 	}
 `;

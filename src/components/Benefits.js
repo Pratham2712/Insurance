@@ -31,7 +31,7 @@ const Benefits = () => {
 		<StyledSection>
 			<div>
 			<MainText>
-				<span style={{ color: '#F06F27' }}>Godspeed</span> Ensure Professional Insurance Services.
+				<span style={{ color: 'var(--logo-orange)' }}>Godspeed</span> Ensure Professional Insurance Services.
 			</MainText>
 			<SubText>
 				Making best use of market, we provide the best insurance and
@@ -60,7 +60,7 @@ const Benefits = () => {
 
 const StyledSection = styled.div`
 	min-height: 50vh;
-	background: #003478;
+	background: var(--dark-blue);
 	padding: 0.5rem 5rem;
 	margin-bottom: 4rem;
 	display: flex;
@@ -120,13 +120,13 @@ const Card = styled.div`
 	justify-content: space-evenly;
 	background-color: white;
 	text-align: center;
-    border-bottom: 3px solid #F06F27;
+    border-bottom: 3px solid var(--logo-orange);
 	padding: 0.9rem 0rem;
 	margin: 0rem 2rem;
 	width: 10rem;
 	height: 9rem;
 	border-radius: 0.3rem;
-	box-shadow: 0 6px 16px rgb(52 105 203 / 16%);
+	box-shadow: var(--box-shadow);
 	@media (max-width: 1150px) {
 		margin: 0rem 1rem;
 		padding: 1rem 0.3rem;
@@ -154,7 +154,7 @@ const Card = styled.div`
 	}
 	h4 {
 		margin-top: 1rem;
-	    color: #003478;
+	    color: var(--dark-blue);
 		@media (max-width: 500px) {
 			font-size: 0.7rem;
 			margin-top: 0.5rem;

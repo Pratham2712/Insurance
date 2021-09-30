@@ -42,7 +42,7 @@ const Advantages = () => {
 									setRisk(false);
 								}}
 								style={{
-									color: cost ? '#F06F27' : ''
+									color: cost ? 'var(--logo-orange)' : ''
 								}}
 							>
 								<img src={costSaving} alt="" /> Cost Saving
@@ -64,7 +64,7 @@ const Advantages = () => {
 									setRisk(false);
 								}}
 								style={{
-									color: claim ? '#F06F27' : ''
+									color: claim ? 'var(--logo-orange)' : ''
 								}}
 							>
 								<img src={Claim} alt="" />Claim Assistance
@@ -86,7 +86,7 @@ const Advantages = () => {
 									setRisk(false);
 								}}
 								style={{
-									color: policy ? '#F06F27' : ''
+									color: policy ? 'var(--logo-orange)' : ''
 								}}
 							>
 								<img src={policyImage} alt="" />Accurate Policy Comparison
@@ -108,7 +108,7 @@ const Advantages = () => {
 									setPolicy(false);
 								}}
 								style={{
-									color: risk ? '#F06F27' : ''
+									color: risk ? 'var(--logo-orange)' : ''
 								}}
 							>
 								<img src={riskImage} alt="" /> Objective Risk Assessment
@@ -149,7 +149,7 @@ const StyledSection = styled(motion.div)`
 
 const Head = styled.div`
 	text-align: center;
-	color: #003478;
+	color: var(--dark-blue);
 	margin-bottom: 4rem;
 	font-size: 2.5rem;
 	font-weight: bold;
@@ -191,7 +191,7 @@ const Tabs = styled.div`
 	i {
 		position: absolute;
 		font-size: 4rem;
-		color: #ffcc83;
+		color: var(--logo-light-orange);
 		top: 5%;
 		right: 101%;
 		@media (max-width: 1150px) {
@@ -208,7 +208,7 @@ const ButtonBox = styled(motion.div)`
     border: 2px solid black;
     padding: 1rem 1.7rem;
     margin-bottom: 1rem;
-    color: #0493F1;
+    color: var(--light-blue);
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -216,7 +216,7 @@ const ButtonBox = styled(motion.div)`
         margin-right: 2rem;
     }
 	&:hover {
-		color: #F06F27;
+		color: var(--logo-orange);
 	}
 	 @media (max-width:1150px){
 		 font-size: 0rem;

@@ -30,8 +30,7 @@ const Card = styled(motion.div)`
     padding: 1rem 1rem;
     align-items: center;
     transition: all .3s ease;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-    box-shadow: 0 6px 16px rgb(52 105 203 / 16%);
+    box-shadow: var(--box-shadow);
     &:hover {
         img {
             transform: scale(0.9);
@@ -64,15 +63,15 @@ const Card = styled(motion.div)`
         padding: 0.2rem 0.9rem;
         transition: all .3s ease;
         border-radius: 0.2rem;
-        border: 2px solid #0493F1;
+        border: 2px solid var(--light-blue);
         font-weight: bold;
         margin-bottom: 1.5rem;
         margin-top: 2rem;
-        background-color: #0493F1;
+        background-color: var(--light-blue);
         color: white;
         &:hover {
             background: transparent;
-            color: #4a4a4a;
+            color: var(--light-black);
         }
     }
     `;

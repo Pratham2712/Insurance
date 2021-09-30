@@ -64,8 +64,7 @@ const StyledSection = styled.section`
 const Head = styled.div`
 	font-size: 2.5rem;
 	font-weight: bold;
-	margin-left: 4rem;
-	color: #4a4a4a;
+	color: var(--dark-blue);
 	@media (max-width: 500px) {
 		font-size: 1.6rem;
 	}
@@ -101,11 +100,12 @@ const Box = styled.div`
 		margin-right: 1rem;
 	}
 	div {
-		color: #4a4a4a;
+		color: black;
 		font-size: 1.2rem;
 	}
 	h3 {
 		margin-top: 0.5rem;
+		color: black;
 		@media (max-width: 500px) {
 			font-size: 1.2rem;
 		}

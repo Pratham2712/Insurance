@@ -9,7 +9,7 @@ export const Box = styled.div`
 		margin-bottom: 2.5rem;
 		letter-spacing: 2px;
 		word-spacing: 3px;
-		color: #0493f1;
+		color: var(--light-blue);
 		@media (max-width: 500px) {
 			margin-top: 1rem;
 			margin-bottom: 1.5rem;
@@ -21,6 +21,7 @@ export const Box = styled.div`
 		align-items: center;
 		font-size: 1.3rem;
 		margin-bottom: 3rem;
+		
 		@media (max-width: 500px) {
 			margin-bottom: 1rem;
 			font-size: 1rem;

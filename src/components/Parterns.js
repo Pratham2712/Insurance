@@ -53,7 +53,7 @@ const StyledSection = styled.section`
 
 const Heading = styled.div`
  
-	color: #003478;
+	color: var(--dark-blue);
 	font-size: 2.5rem;
 	font-weight: bold;
     margin-top: 0.2rem;
