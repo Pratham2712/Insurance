@@ -6,6 +6,8 @@ import About from '../components/About';
 import Benefits from '../components/Benefits';
 import Contact from '../components/contact';
 import Parterns from '../components/Parterns';
+//for scroll top
+import ScrollTop from '../ScrollTop';
 const Home = () => {
 	return (
 		<main>
@@ -16,6 +18,7 @@ const Home = () => {
 			<Benefits />
 			<Parterns/>
 			<Contact />
+			<ScrollTop/>
 		</main>
 	);
 };

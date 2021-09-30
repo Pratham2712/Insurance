@@ -4,66 +4,69 @@ import { motion } from 'framer-motion';
 import contact from '../Images/contact-page.jpg';
 import { pageAnimation } from '../Animation';
 
+
 const Form = () => {
 	const [Inputdata, setInputData] = useState({
-		UserName : "",
-		Email : "",
-		PhoneNumber : "",
-		Message : "",
+		UserName: "",
+		Email: "",
+		PhoneNumber: "",
+		Message: "",
 	});
+
+	const [finish, setFinish] = useState(false);
+
 	function Submit(e) {
 		e.preventDefault();
 		const username = document.getElementById('username');
 		const email = document.getElementById('email');
 		const phone = document.getElementById('phone');
 		const message = document.getElementById('message');
-		const formControl = document.querySelectorAll('.form-control');
+		const formcontrol = document.querySelectorAll('.form-control');
 		checkInputs(username, email, phone, message);
-		console.log(Inputdata);
-		setInputData({
-		UserName : "",
-		Email : "",
-		PhoneNumber : "",
-		Message : "",
-		})
-		/* formControl.classList.remove('.success'); */
+		setFinish(true);
+		
 	}
 	
-	function checkInputs(username,email,phone,message) {
+	function checkInputs(username, email, phone, message) {
 		// trim to remove the whitespaces
 		const usernameValue = username.value.trim();
 		const emailValue = email.value.trim();
 		const phoneValue = phone.value.trim();
 		const messageValue = message.value;
-		if(usernameValue === '') {
+		if (usernameValue === '') {
 			setErrorFor(username, 'Name is Mandatory');
 		} else {
 			setSuccessFor(username);
+		
 		}
 		
-		if(emailValue === '') {
+		if (emailValue === '') {
 			setErrorFor(email, 'Email is Mandatory');
 		} else if (!isEmail(emailValue)) {
 			setErrorFor(email, 'Invalid email');
 		} else {
 			setSuccessFor(email);
+	
 		}
 
-		if(phoneValue === '') {
+		if (phoneValue === '') {
 			setErrorFor(phone, 'phone number is Mandatory');
-		}   else if (isNaN(phoneValue)) {
+		} else if (isNaN(phoneValue)) {
 			setErrorFor(phone, 'Invalid phone number');
 		} else if (!isPhone(phoneValue)) {
 			setErrorFor(phone, 'phone is less than 10 digits');
-		}else {
+		} else {
 			setSuccessFor(phone);
+	
 		}
 
-		if(messageValue === '') {
+		if (messageValue === '') {
 			setErrorFor(message, 'Message is Mandatory');
 		} else {
 			setSuccessFor(message);
+	
 		}
+
 	}
 	
 	function setErrorFor(input, message) {
@@ -71,72 +74,80 @@ const Form = () => {
 		const small = formControl.querySelector('small');
 		formControl.className = 'form-control error';
 		small.innerText = message;
+		
+	
 	}
 	
 	function setSuccessFor(input) {
+		
 		const formControl = input.parentElement;
 		formControl.className = 'form-control success';
+		
 	}
 	
-	function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-	}
+			function isEmail(email) {
+				return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+			
+			}
+
 	
 	function isPhone(phone) {
 		return /^\d{10}$/.test(phone);
 	}
-    return (
+	return (
 		<StyledSection variants={pageAnimation} initial="hidden" animate="show" exit="exit">
 			<Heading>
 				<div>Contact</div>
 			</Heading>
 			<Flex>
-            <FormPart>
-                <div className="container">
-	<div className="header">
-		<h2>Get Expert Solution . Ask anything</h2>
-	</div>
-	<form id="form" className="form" onSubmit={Submit}>
-		<div className="form-control">
-			<label for="username">Name</label>
-			<input type="text" value={Inputdata.UserName} id="username" onChange={(e) => setInputData({ ...Inputdata, UserName: e.target.value })} />
-			<i className="fas fa-check-circle"></i>
-			<i className="fas fa-exclamation-circle"></i>
-			<small>Error message</small>
-		</div>
-		<div className="form-control">
-			<label for="email">Email</label>
-			<input type="email" value={Inputdata.Email} onChange={(e) => setInputData({ ...Inputdata, Email: e.target.value })} id="email" />
-			<i className="fas fa-check-circle"></i>
-			<i className="fas fa-exclamation-circle"></i>
-			<small>Error message</small>
-		</div>
-		<div className="form-control">
-			<label for="phone">Phone</label>
-			<input type="tel" value={Inputdata.PhoneNumber} maxlength="10"id="phone" onChange={(e) => setInputData({ ...Inputdata, PhoneNumber: e.target.value })}/>
-			<i className="fas fa-check-circle"></i>
-			<i className="fas fa-exclamation-circle"></i>
-			<small>Error message</small>
-		</div>
-		<div className="form-control">
-			<label for="message" className="message">Message</label>
-			<textarea id="message" value={Inputdata.Message} name="message" rows="7" cols="52" onChange={(e) => setInputData({ ...Inputdata, Message: e.target.value })} />
-			<i className="fas fa-check-circle"></i>
-			<i className="fas fa-exclamation-circle"></i>
-			<small>Error message</small>
-		</div>
-		<button>Submit</button>
-	</form>
-</div>
+				<FormPart>
+					<div className="container">
+						<div className="header">
+							<h2>Get Expert Solution . Ask anything</h2>
+						</div>
+						<form id="form" className="form" onSubmit={Submit}>
+							<div className="form-control">
+								<label for="username">Name</label>
+								<input type="text" value={Inputdata.UserName} id="username" onChange={(e) => setInputData({ ...Inputdata, UserName: e.target.value })} />
+								<i className="fas fa-check-circle"></i>
+								<i className="fas fa-exclamation-circle"></i>
+								<small>Error message</small>
+							</div>
+							<div className="form-control">
+								<label for="email">Email</label>
+								<input type="email" value={Inputdata.Email} onChange={(e) => setInputData({ ...Inputdata, Email: e.target.value })} id="email" />
+								<i className="fas fa-check-circle"></i>
+								<i className="fas fa-exclamation-circle"></i>
+								<small>Error message</small>
+							</div>
+							<div className="form-control">
+								<label for="phone">Phone</label>
+								<input type="tel" value={Inputdata.PhoneNumber} maxlength="10" id="phone" onChange={(e) => setInputData({ ...Inputdata, PhoneNumber: e.target.value })} />
+								<i className="fas fa-check-circle"></i>
+								<i className="fas fa-exclamation-circle"></i>
+								<small>Error message</small>
+							</div>
+							<div className="form-control">
+								<label for="message" className="message">Message</label>
+								<textarea id="message" value={Inputdata.Message} name="message" rows="7" cols="52" onChange={(e) => setInputData({ ...Inputdata, Message: e.target.value })} />
+								<i className="fas fa-check-circle"></i>
+								<i className="fas fa-exclamation-circle"></i>
+								<small>Error message</small>
+							</div>
+							<button>Submit</button>
+						</form>
+					</div>
 
 				</FormPart>
 				<Image>
-                    <img src={contact} alt="" />
+					<img src={contact} alt="" />
 				</Image>
 			</Flex>
-        </StyledSection>
-    )
+		
+		</StyledSection>
+	)
 }
+
 
 const StyledSection = styled(motion.section)`
     min-height: 80vh;
@@ -235,18 +246,18 @@ label.message {
 }
 
 .form-control.success input {
-	border-color: #2ecc71;
+	/* border-color: #2ecc71; */
 }
 
 .form-control.error input {
-	border-color: #e74c3c;
+	/* border-color: #e74c3c; */
 }
 .form-control.success textarea {
-	border-color: #2ecc71;
+	/* border-color: #2ecc71; */
 }
 
 .form-control.error textarea {
-	border-color: #e74c3c;
+	/* border-color: #e74c3c; */
 }
 
 .form-control i {
