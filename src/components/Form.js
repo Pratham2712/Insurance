@@ -1,11 +1,92 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import contact from '../Images/contact-page.jpg';
+import { pageAnimation } from '../Animation';
 
 const Form = () => {
+	const [Inputdata, setInputData] = useState({
+		UserName : "",
+		Email : "",
+		PhoneNumber : "",
+		Message : "",
+	});
+	function Submit(e) {
+		e.preventDefault();
+		const username = document.getElementById('username');
+		const email = document.getElementById('email');
+		const phone = document.getElementById('phone');
+		const message = document.getElementById('message');
+		const formControl = document.querySelectorAll('.form-control');
+		checkInputs(username, email, phone, message);
+		console.log(Inputdata);
+		setInputData({
+		UserName : "",
+		Email : "",
+		PhoneNumber : "",
+		Message : "",
+		})
+		/* formControl.classList.remove('.success'); */
+	}
+	
+	function checkInputs(username,email,phone,message) {
+		// trim to remove the whitespaces
+		const usernameValue = username.value.trim();
+		const emailValue = email.value.trim();
+		const phoneValue = phone.value.trim();
+		const messageValue = message.value;
+		if(usernameValue === '') {
+			setErrorFor(username, 'Name is Mandatory');
+		} else {
+			setSuccessFor(username);
+		}
+		
+		if(emailValue === '') {
+			setErrorFor(email, 'Email is Mandatory');
+		} else if (!isEmail(emailValue)) {
+			setErrorFor(email, 'Invalid email');
+		} else {
+			setSuccessFor(email);
+		}
+
+		if(phoneValue === '') {
+			setErrorFor(phone, 'phone number is Mandatory');
+		}   else if (isNaN(phoneValue)) {
+			setErrorFor(phone, 'Invalid phone number');
+		} else if (!isPhone(phoneValue)) {
+			setErrorFor(phone, 'phone is less than 10 digits');
+		}else {
+			setSuccessFor(phone);
+		}
+
+		if(messageValue === '') {
+			setErrorFor(message, 'Message is Mandatory');
+		} else {
+			setSuccessFor(message);
+		}
+	}
+	
+	function setErrorFor(input, message) {
+		const formControl = input.parentElement;
+		const small = formControl.querySelector('small');
+		formControl.className = 'form-control error';
+		small.innerText = message;
+	}
+	
+	function setSuccessFor(input) {
+		const formControl = input.parentElement;
+		formControl.className = 'form-control success';
+	}
+	
+	function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+	}
+	
+	function isPhone(phone) {
+		return /^\d{10}$/.test(phone);
+	}
     return (
-		<StyledSection>
+		<StyledSection variants={pageAnimation} initial="hidden" animate="show" exit="exit">
 			<Heading>
 				<div>Contact</div>
 			</Heading>
@@ -15,26 +96,33 @@ const Form = () => {
 	<div className="header">
 		<h2>Get Expert Solution . Ask anything</h2>
 	</div>
-	<form id="form" className="form">
+	<form id="form" className="form" onSubmit={Submit}>
 		<div className="form-control">
 			<label for="username">Name</label>
-			<input type="text" id="username" />
+			<input type="text" value={Inputdata.UserName} id="username" onChange={(e) => setInputData({ ...Inputdata, UserName: e.target.value })} />
 			<i className="fas fa-check-circle"></i>
 			<i className="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
 		<div className="form-control">
 			<label for="email">Email</label>
-			<input type="email" id="email" />
+			<input type="email" value={Inputdata.Email} onChange={(e) => setInputData({ ...Inputdata, Email: e.target.value })} id="email" />
+			<i className="fas fa-check-circle"></i>
+			<i className="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div className="form-control">
+			<label for="phone">Phone</label>
+			<input type="tel" value={Inputdata.PhoneNumber} maxlength="10"id="phone" onChange={(e) => setInputData({ ...Inputdata, PhoneNumber: e.target.value })}/>
 			<i className="fas fa-check-circle"></i>
 			<i className="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
 		<div className="form-control">
 			<label for="message" className="message">Message</label>
-			<textarea id="message" name="message" rows="7" cols="52" />
-			<i classNameName="fas fa-check-circle"></i>
-			<i classNameName="fas fa-exclamation-circle"></i>
+			<textarea id="message" value={Inputdata.Message} name="message" rows="7" cols="52" onChange={(e) => setInputData({ ...Inputdata, Message: e.target.value })} />
+			<i className="fas fa-check-circle"></i>
+			<i className="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
 		<button>Submit</button>
@@ -69,7 +157,7 @@ const FormPart = styled.div`
 	background-color: #fff;
 	border-radius: 5px;
 	box-shadow: var(--box-shadow);
-	overflow: hidden;
+	
 	width: 500px;
 	max-width: 100%;
 }
@@ -97,8 +185,8 @@ const FormPart = styled.div`
 }
 
 .form-control {
-	margin-bottom: 10px;
 	padding-bottom: 20px;
+    margin-bottom: 10px;
 	position: relative;
 }
 
@@ -137,7 +225,7 @@ label.message {
 	display: block;
 	font-family: inherit;
 	font-size: 14px;
-	padding: 10px;
+	padding: 5px 10px ;
 	width: 100%;
 }
 
@@ -153,11 +241,18 @@ label.message {
 .form-control.error input {
 	border-color: #e74c3c;
 }
+.form-control.success textarea {
+	border-color: #2ecc71;
+}
+
+.form-control.error textarea {
+	border-color: #e74c3c;
+}
 
 .form-control i {
 	visibility: hidden;
 	position: absolute;
-	top: 40px;
+	top: 25px;
 	right: 10px;
 }
 
@@ -184,8 +279,8 @@ label.message {
 }
 
 .form button {
-	background-color: #8e44ad;
-	border: 2px solid #8e44ad;
+	background-color: #BF3DB7;
+	border: 2px solid #BF3DB7;
 	border-radius: 4px;
 	color: #fff;
 	display: block;
@@ -194,6 +289,7 @@ label.message {
 	padding: 10px;
 	margin-top: 20px;
 	width: 100%;
+	cursor: pointer;
 }
 `
 const Flex = styled.div`
@@ -208,7 +304,14 @@ const Image = styled.div`
 	img {
 		width: 50rem;
 		min-height: 80vh;
-
+        @media (max-width: 1150px){
+			width: 100%;
+			min-height: 48vh;
+		}
+        @media (max-width: 500px){
+			width: 100%;
+			min-height: 40vh;
+		}
 	}
 `
 

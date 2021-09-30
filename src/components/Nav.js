@@ -9,6 +9,10 @@ const Nav = () => {
 	const [ toggle, setToggle ] = useState(false);
 	const [ colorChange, setColorchange ] = useState(false);
 	
+	
+	const close = () => {
+		setToggle(false);
+	}
 
 	useEffect(() => {
 		const back = document.querySelector('.back');
@@ -52,7 +56,7 @@ const Nav = () => {
 					className="back"
 				>
 					<Li className="dropbtn">
-						<a href="/">Insurance</a>
+						<a>Insurance</a>
 						<span>
 							<i className="fas fa-angle-down" />
 						</span>
@@ -61,20 +65,20 @@ const Nav = () => {
 							<Insurance />
 						</div>
 					</Li>
-					<Li>
-						<a href="/">Renewals</a>
+					<Li onClick={close}>
+						<a href="#">Renewals</a>
 					</Li>
-					<Li>
-						<a href="/">Claim</a>
+					<Li onClick={close}>
+						<a href="#">Claim</a>
 					</Li>
-					<Li>
-						<a href="/">Blog</a>
+					<Li onClick={close}>
+						<a href="#">Blog</a>
 					</Li>
-					<Li>
+					<Li onClick={close}>
 						<Link to="/contact">Contact</Link>
 					</Li>
-					<Li>
-						<a href="/">Become POS</a>
+					<Li onClick={close}>
+						<a href="#">Become POS</a>
 					</Li>
 					<Li id="login-btn">
 						<button id="login">
@@ -226,17 +230,16 @@ const Image = styled.div`
 		position: fixed;
 		object-fit: cover;
 		cursor: pointer;
-		padding-bottom: 1rem;
-		top: 1%;
+		top: 0%;
 		width: 25%;
 		@media (max-width: 1150px) {
-			top: 4%;
+			top: 5%;
 			width: 50%;
 		}
 		@media (max-width: 500px) {
 			top: 6%;
-    width: 56%;
-    height: 10vh;
+    width: 54%;
+    height: 7vh;
 		}
 	}
 `;

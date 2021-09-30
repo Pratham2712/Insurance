@@ -31,7 +31,8 @@ const GlobalStyles = createGlobalStyle`
     }
     body {
         font-family: 'Lato', sans-serif;
-        overflow-x: hidden; 
+        overflow-x: hidden;
+    
     }`;
 
 export default GlobalStyles;
