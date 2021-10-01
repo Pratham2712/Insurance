@@ -18,7 +18,7 @@ const Home = () => {
 			<Benefits />
 			<Parterns/>
 			<Contact />
-			<ScrollTop/>
+		   <ScrollTop/>
 		</main>
 	);
 };

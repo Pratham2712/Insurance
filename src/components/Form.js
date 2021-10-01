@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import contact from '../Images/contact-page.jpg';
@@ -6,27 +6,48 @@ import { pageAnimation } from '../Animation';
 
 
 const Form = () => {
+	//User data object
 	const [Inputdata, setInputData] = useState({
 		UserName: "",
 		Email: "",
 		PhoneNumber: "",
 		Message: "",
 	});
-
-	const [finish, setFinish] = useState(false);
-
+    
+	//input validation confirmation
+	const [NameCheck, setNameCheck] = useState(false);
+	const [EmailCheck, setEmailCheck] = useState(false);
+	const [PhoneNumberCheck, setPhoneNumberCheck] = useState(false);
+	const [MessageCheck, setMessageCheck] = useState(false);
+	
+	//Data posting
+	useEffect(() => {
+		if (EmailCheck && PhoneNumberCheck && NameCheck && MessageCheck) {
+			console.log(Inputdata);
+			setInputData({
+				UserName: "",
+				Email: "",
+				PhoneNumber: "",
+				Message: "",
+			});
+			setEmailCheck(false);
+			setPhoneNumberCheck(false);
+			setNameCheck(false);
+			setMessageCheck(false);
+		}
+	}, [EmailCheck,PhoneNumberCheck,NameCheck,MessageCheck]);
+    
+	//Checking validation on submit
 	function Submit(e) {
 		e.preventDefault();
 		const username = document.getElementById('username');
 		const email = document.getElementById('email');
 		const phone = document.getElementById('phone');
 		const message = document.getElementById('message');
-		const formcontrol = document.querySelectorAll('.form-control');
 		checkInputs(username, email, phone, message);
-		setFinish(true);
-		
 	}
 	
+	//main function
 	function checkInputs(username, email, phone, message) {
 		// trim to remove the whitespaces
 		const usernameValue = username.value.trim();
@@ -37,7 +58,7 @@ const Form = () => {
 			setErrorFor(username, 'Name is Mandatory');
 		} else {
 			setSuccessFor(username);
-		
+			setNameCheck(true);
 		}
 		
 		if (emailValue === '') {
@@ -46,6 +67,7 @@ const Form = () => {
 			setErrorFor(email, 'Invalid email');
 		} else {
 			setSuccessFor(email);
+			setEmailCheck(true);
 	
 		}
 
@@ -57,6 +79,7 @@ const Form = () => {
 			setErrorFor(phone, 'phone is less than 10 digits');
 		} else {
 			setSuccessFor(phone);
+			setPhoneNumberCheck(true);
 	
 		}
 
@@ -64,33 +87,34 @@ const Form = () => {
 			setErrorFor(message, 'Message is Mandatory');
 		} else {
 			setSuccessFor(message);
-	
+			setMessageCheck(true);
 		}
 
 	}
 	
+	//Error message
 	function setErrorFor(input, message) {
 		const formControl = input.parentElement;
 		const small = formControl.querySelector('small');
 		formControl.className = 'form-control error';
 		small.innerText = message;
-		
-	
+		setTimeout(() => {
+			small.innerText = "";
+		}, 2000);
 	}
 	
+	//Success 
 	function setSuccessFor(input) {
-		
 		const formControl = input.parentElement;
 		formControl.className = 'form-control success';
-		
 	}
-	
+            //Email regex test
 			function isEmail(email) {
 				return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 			
 			}
 
-	
+	//phone number regex test
 	function isPhone(phone) {
 		return /^\d{10}$/.test(phone);
 	}
@@ -109,29 +133,21 @@ const Form = () => {
 							<div className="form-control">
 								<label for="username">Name</label>
 								<input type="text" value={Inputdata.UserName} id="username" onChange={(e) => setInputData({ ...Inputdata, UserName: e.target.value })} />
-								<i className="fas fa-check-circle"></i>
-								<i className="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
 							</div>
 							<div className="form-control">
 								<label for="email">Email</label>
 								<input type="email" value={Inputdata.Email} onChange={(e) => setInputData({ ...Inputdata, Email: e.target.value })} id="email" />
-								<i className="fas fa-check-circle"></i>
-								<i className="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
 							</div>
 							<div className="form-control">
 								<label for="phone">Phone</label>
-								<input type="tel" value={Inputdata.PhoneNumber} maxlength="10" id="phone" onChange={(e) => setInputData({ ...Inputdata, PhoneNumber: e.target.value })} />
-								<i className="fas fa-check-circle"></i>
-								<i className="fas fa-exclamation-circle"></i>
+								<input type="tel" value={Inputdata.PhoneNumber} maxLength="10" id="phone" onChange={(e) => setInputData({ ...Inputdata, PhoneNumber: e.target.value })} />
 								<small>Error message</small>
 							</div>
 							<div className="form-control">
 								<label for="message" className="message">Message</label>
 								<textarea id="message" value={Inputdata.Message} name="message" rows="7" cols="52" onChange={(e) => setInputData({ ...Inputdata, Message: e.target.value })} />
-								<i className="fas fa-check-circle"></i>
-								<i className="fas fa-exclamation-circle"></i>
 								<small>Error message</small>
 							</div>
 							<button>Submit</button>
@@ -260,7 +276,7 @@ label.message {
 	/* border-color: #e74c3c; */
 }
 
-.form-control i {
+/* .form-control i {
 	visibility: hidden;
 	position: absolute;
 	top: 25px;
@@ -275,7 +291,7 @@ label.message {
 .form-control.error i.fa-exclamation-circle {
 	color: #e74c3c;
 	visibility: visible;
-}
+} */
 
 .form-control small {
 	color: #e74c3c;
@@ -301,6 +317,9 @@ label.message {
 	margin-top: 20px;
 	width: 100%;
 	cursor: pointer;
+	&:focus {
+		outline: none;
+	}
 }
 `
 const Flex = styled.div`
