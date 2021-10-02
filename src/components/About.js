@@ -149,7 +149,7 @@ const AboutContent = styled.div`
     `
 const Flex = styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     text-align: center;
     margin-top: -1.5rem;
