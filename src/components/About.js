@@ -4,12 +4,13 @@ import styled from 'styled-components';
 import discussImage from '../Images/aboutImage.jpg'
 import google from '../Images/google.svg'
 import star from '../Images/star.png'
-import aboutContent from '../Images/about-content.jpg'
+import aboutContent from '../Images/about-content.svg'
 //for animation of number counter
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
-//lazyload
-import LazyLoad from 'react-lazyload';
+//contact page link
+import { Link } from 'react-router-dom';
+
 
 
 const About = () => {
@@ -22,9 +23,9 @@ const About = () => {
                    
                     <div style={{display:"flex",justifyContent: "space-evenly",alignItems: "center"}}>
                     <Image>
-                        <LazyLoad effect="blur">
+                      
                 <img src={aboutContent} alt="" />
-                </LazyLoad>
+               
             </Image>
                         <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fugiat iste illum dolores nesciunt ad? Facere illo a sequi nobis perferendis dignissimos voluptatibus optio.</Text>
                     </div>
@@ -65,7 +66,9 @@ const About = () => {
                         </div>
                     </Flex>
                 <Contact>
+                    <Link to="/contact">
                     <button>Contact</button>
+                    </Link>
                     </Contact>
        
             </AboutContent>

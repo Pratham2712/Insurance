@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import contact from '../Images/contact-page.jpg';
+import contact from '../Images/contact-page.svg';
 import { pageAnimation } from '../Animation';
 
 
@@ -147,7 +147,7 @@ const Form = () => {
 							</div>
 							<div className="form-control">
 								<label for="message" className="message">Message</label>
-								<textarea id="message" value={Inputdata.Message} name="message" rows="7" cols="52" onChange={(e) => setInputData({ ...Inputdata, Message: e.target.value })} />
+								<textarea id="message" value={Inputdata.Message} name="message" rows="4" cols="52" onChange={(e) => setInputData({ ...Inputdata, Message: e.target.value })} />
 								<small>Error message</small>
 							</div>
 							<button>Submit</button>
@@ -205,7 +205,7 @@ const FormPart = styled.div`
 }
 
 .form {
-	padding: 30px 40px;
+	padding: 20px 40px;
 	@media (max-width: 500px){
 		padding: 10px 20px;
 	}
@@ -213,7 +213,7 @@ const FormPart = styled.div`
 
 .form-control {
 	padding-bottom: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 	position: relative;
 }
 
@@ -228,7 +228,7 @@ const FormPart = styled.div`
 
 label.message {
 	display: inline-block;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 
 }
 
@@ -314,7 +314,7 @@ label.message {
 	font-family: inherit;
 	font-size: 16px;
 	padding: 10px;
-	margin-top: 20px;
+	margin-top: 10px;
 	width: 100%;
 	cursor: pointer;
 	&:focus {
@@ -332,8 +332,8 @@ const Flex = styled.div`
 `
 const Image = styled.div`
 	img {
-		width: 50rem;
-		min-height: 80vh;
+		width: 100%;
+		min-height: 90vh;
         @media (max-width: 1150px){
 			width: 100%;
 			min-height: 48vh;
