@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import discussImage from '../Images/aboutImage.jpg'
 import google from '../Images/google.svg'
 import star from '../Images/star.png'
-import aboutContent from '../Images/about-content.svg'
+import aboutContent from '../Images/about-content.png'
 //for animation of number counter
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
@@ -109,8 +109,8 @@ const StyledSection = styled.section`
 const Image = styled.div`
 text-align: center;
     img {
-        width: 20rem;
-        height: 20rem;
+        width: 15rem;
+        height: 15rem;
         @media (max-width: 500px) {
 		width: 10rem;
 		height: 10rem;
@@ -152,7 +152,7 @@ const Flex = styled.div`
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    margin-top: -2.5rem;
+    margin-top: -1.5rem;
     div {
         padding-right: 0.1rem;
     }
