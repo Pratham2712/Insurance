@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import contact from '../Images/contact-page.svg';
+import contact from '../Images/contact-page.jpg';
 import { pageAnimation } from '../Animation';
 
 
@@ -333,7 +333,7 @@ const Flex = styled.div`
 const Image = styled.div`
 	img {
 		width: 100%;
-		min-height: 90vh;
+		min-height: 80vh;
         @media (max-width: 1150px){
 			width: 100%;
 			min-height: 48vh;

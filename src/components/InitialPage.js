@@ -120,6 +120,7 @@ const Buttons = styled(motion.div)`
             font-size: 1rem;
             padding: 0.4rem 1.2rem;
             margin-left: 2.5rem;
+            font-weight: lighter;
         }
      }
 `;
