@@ -3,11 +3,11 @@ import Product from './Product';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 //import icon
-import carInsurance from '../Images/car-insurance.png'
-import health from '../Images/healthcare.png'
-import motor from '../Images/motorcycle.png'
-import travel from '../Images/travel-insurance.png'
-import life from '../Images/life-insurance.png'
+import carInsurance from '../Images/Products/car-insurance.png'
+import health from '../Images/Products/healthcare.png'
+import motor from '../Images/Products/motorcycle.png'
+import travel from '../Images/Products/travel-insurance.png'
+import life from '../Images/Products/life-insurance.png'
 
 const Products = () => {
 	const products = [

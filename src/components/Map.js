@@ -12,7 +12,7 @@ const Map = () => {
     return (
         <section>
             <div style={{width: '100%',height: '50vh'}}>
-            <GoogleMapReact bootstrapURLKeys={{key : 'AIzaSyDCQAWU1m_jF9spycH_c50Htp5yxhgdg50'}} defaultCenter={coords} defaultZoom={13}>
+            <GoogleMapReact bootstrapURLKeys={{key : 'AIzaSyBykvifAV2xriv6VLw6wp9USo0S0UHuJf8'}} defaultCenter={coords} defaultZoom={13}>
                     <LocationMarker lat={coords.lat} lng={ coords.lng}/>
             </GoogleMapReact>
             </div>

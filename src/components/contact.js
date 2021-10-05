@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import SVG from './SVG';
-import mailing from '../Images/mailing.png';
-import phoneCall from '../Images/phone-call.png';
 import LazyLoad from 'react-lazyload';
 import LightSpeed from 'react-reveal/LightSpeed';
+//import images
+import mailing from '../Images/contactSection/mailing.png';
+import phoneCall from '../Images/contactSection/phone-call.png';
 
 const contact = () => {
 	return (

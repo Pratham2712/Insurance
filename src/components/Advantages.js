@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import Slide from 'react-reveal/Slide';
 //Importing images
-import costSaving from '../Images/piggy-bank.png';
-import Claim from '../Images/claim.png';
-import policyImage from '../Images/risk-management.png';
-import riskImage from '../Images/market.png';
+import costSaving from '../Images/Advantages/piggy-bank.png';
+import Claim from '../Images/Advantages/claim.png';
+import policyImage from '../Images/Advantages/risk-management.png';
+import riskImage from '../Images/Advantages/market.png';
 //importing text of each
 import CostSaving from './AdvantageText/CostSaving';
 import ClaimText from './AdvantageText/Claim';
@@ -128,7 +128,7 @@ const Advantages = () => {
 };
 
 const StyledSection = styled(motion.div)`
-    background: #F6F7FB;
+   /*  background: #F6F7FB; */
     padding: 0rem 5rem;
     padding-bottom: 3rem;
 	padding-top: 2rem;

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 //Importing images
-import logo from '../Images/godspeed.svg';
-import address from '../Images/home.png';
-import email from '../Images/email.png';
-import call from '../Images/call.png';
+import logo from '../Images/Footer/godspeed.svg';
+import address from '../Images/Footer/home.png';
+import email from '../Images/Footer/email.png';
+import call from '../Images/Footer/call.png';
 const Footer = () => {
 	return (
 		<StyledFooter>

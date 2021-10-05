@@ -1,10 +1,11 @@
 import React,{useState} from 'react'
 //import images
 import styled from 'styled-components';
-import discussImage from '../Images/aboutImage.jpg'
-import google from '../Images/google.svg'
-import star from '../Images/star.png'
-import aboutContent from '../Images/about-content.png'
+//importing images
+import discussImage from '../Images/AboutUsSection/aboutImage.jpg'
+import google from '../Images/AboutUsSection/google.svg'
+import star from '../Images/AboutUsSection/star.png'
+import aboutContent from '../Images/AboutUsSection/about-content.png'
 //for animation of number counter
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";

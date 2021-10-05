@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import LazyLoad from 'react-lazyload';
 //Importing images
-import bestPrice from '../Images/best-price.png';
-import support from '../Images/support.png';
-import dance from '../Images/dance.png';
-import money from '../Images/money.png';
+import bestPrice from '../Images/Benefits/best-price.png';
+import support from '../Images/Benefits/support.png';
+import dance from '../Images/Benefits/dance.png';
+import money from '../Images/Benefits/money.png';
 
 const Benefits = () => {
 	let BenefitData = [

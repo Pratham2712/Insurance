@@ -1,11 +1,19 @@
 import React,{useState,useEffect} from 'react'
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import contact from '../Images/contact-page.jpg';
 import { pageAnimation } from '../Animation';
+import { useLocation} from 'react-router-dom';
+//importing images
+import contact from '../Images/ContactPage/contact-page.jpg';
+import car from '../Images/ContactPage/car Contact.png';
+import bike from '../Images/ContactPage/motorcycle.png';
+import health from '../Images/ContactPage/health-insurance.png';
+import life from '../Images/ContactPage/life-insurance.png';
+import travel from '../Images/ContactPage/airplane.png';
 
 
 const Form = () => {
+	const { pathname } = useLocation();
 	//User data object
 	const [Inputdata, setInputData] = useState({
 		UserName: "",
@@ -121,7 +129,7 @@ const Form = () => {
 	return (
 		<StyledSection variants={pageAnimation} initial="hidden" animate="show" exit="exit">
 			<Heading>
-				<div>Contact</div>
+				<div>{pathname === '/Car-Insurance'?(<div>Contact for <span>Car Insurance</span></div>):pathname === '/Bike-Insurance'?(<div>Contact for <span>Bike Insurance</span></div>):pathname === '/Health-Insurance'? (<div>Contact for <span>Health Insurance</span></div>):pathname === '/Life-Insurance'?(<div>Contact for <span>Life Insurance</span></div>):pathname === '/Travel-Insurance'?(<div>Contact for <span>Travel Insurance</span></div>):(<div>Contact Us</div>)}</div>
 			</Heading>
 			<Flex>
 				<FormPart>
@@ -156,7 +164,10 @@ const Form = () => {
 
 				</FormPart>
 				<Image>
-					<img src={contact} alt="" />
+					{
+						<img src={pathname === '/Car-Insurance'?car:pathname === '/Bike-Insurance'?bike:pathname === '/Health-Insurance'?health:pathname === '/Life-Insurance'?life:pathname === '/Travel-Insurance'?travel:contact} alt="" />
+					
+				}
 				</Image>
 			</Flex>
 		
@@ -334,9 +345,11 @@ const Image = styled.div`
 	img {
 		width: 100%;
 		min-height: 80vh;
+		margin: 1rem 0rem;
         @media (max-width: 1150px){
 			width: 100%;
 			min-height: 48vh;
+			
 		}
         @media (max-width: 500px){
 			width: 100%;
@@ -351,6 +364,11 @@ const Heading = styled.div`
 	margin-bottom: 4rem;
 	font-size: 2.5rem;
 	font-weight: bold;
+    letter-spacing: 1.5px;
+	word-spacing: 3px;
+	span {
+		color: var(--logo-orange);
+	}
 	@media (max-width: 500px) {
 		margin-bottom: 2rem;
 		font-size: 1.6rem;

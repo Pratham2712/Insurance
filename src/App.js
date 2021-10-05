@@ -27,6 +27,21 @@ function App() {
 				<Route path="/contact">
 			        <Contact />
 			    </Route>
+				<Route path="/Car-Insurance" exact>
+			        <Contact />
+			    </Route>
+				<Route path="/Bike-Insurance" exact>
+			        <Contact />
+			    </Route>
+				<Route path="/Health-Insurance" exact>
+			        <Contact />
+			    </Route>
+				<Route path="/Life-Insurance" exact>
+			        <Contact />
+			    </Route>
+				<Route path="/Travel-Insurance" exact>
+			        <Contact />
+			    </Route>
 			</Switch>
 			</AnimatePresence>
 			<Footer/>
