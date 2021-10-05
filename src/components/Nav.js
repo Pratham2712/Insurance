@@ -62,7 +62,7 @@ const Nav = () => {
 						</span>
 
 						<div className="insurance-content">
-							<Insurance />
+							<Insurance toggle={toggle} setToggle={setToggle}/>
 						</div>
 					</Li>
 					<Li onClick={close}>
@@ -155,9 +155,13 @@ const StyledNav = styled(motion.nav)`
 		position: absolute;
 		display: none;
 		top: 100%;
-		
 		width: 10rem;
 		left: -20%;
+		@media (max-width: 1150px){
+			top: 0%;
+			left: -67%;
+			height: 100vh;
+		}
 	}
 	.dropbtn:hover .insurance-content {
 		opacity: 1;
